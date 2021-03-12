@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webapp',
+    'blog',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,10 @@ DATABASES = {
     }
 }
 
+FIXTURE_DIRS = [
+   os.path.join(BASE_DIR, "fixtures")
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -124,3 +130,6 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     'webapp/static/'
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = 'media/'

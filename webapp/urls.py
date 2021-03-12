@@ -4,5 +4,7 @@ from webapp import views
 
 
 urlpatterns = [
-    path('', include('jumpingprotein.urls')),
+    path('', views.index, name='index'),
+
+
 ]
