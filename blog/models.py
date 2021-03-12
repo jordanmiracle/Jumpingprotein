@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 
 
 class PublishedManager(models.Manager):
@@ -38,3 +39,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        args = [
+            self.publish.year,
+            self.publish.month,
+            self.publish.day,
+            self.slug,
+
+        ]
+        return reverse('blog:post_detail', args=args)
