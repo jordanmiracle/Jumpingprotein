@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-
-{% block title %}{{ post.title }}{% endblock %}
+{% load custom_blog_tags %}
+{% block title %}{{ post.title|safe }}{% endblock %}
 
 {% block content %}
- <h1>{{ post.title }}</h1>
+ <h1>{{ post.title|safe }}</h1>
  <p class="date">
-   Published {{ post.publish }} by {{ post.author }}
+   Published {{ post.publish }} by {{ post.author }} | {{ post.body|read_time }}
  </p>
- {{ post.body|linebreaks }}
+ {{ post.body|safe|linebreaks }}
 {% endblock %}
