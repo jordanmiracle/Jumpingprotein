@@ -1,11 +1,13 @@
+/* Blue, green, brown as primary. Red, white, yellow as secondary.*/
+
 html, body, div, span,
-applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong,
+object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, address,
+img, ins, kbd, q, s, samp, small, strike, strong,
 sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
-aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
-output, ruby, section, summary, time, mark, audio, video {
+ footer, header, hgroup, menu, nav
+{
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -198,25 +200,6 @@ ul.contact li a.icon-rss:before {
 /*********************************************************************************/
 /* 4-column                                                                      */
 /*********************************************************************************/
-
-.box1,
-.box2,
-.box3,
-.box4 {
-    width: 235px;
-}
-
-.box1,
-.box2,
-.box3,
-{
-    float: left;
-    margin-right: 20px;
-}
-
-.box4 {
-    float: right;
-}
 
 /*********************************************************************************/
 /* 3-column                                                                      */
@@ -423,6 +406,7 @@ ul.contact li a.icon-rss:before {
 /*********************************************************************************/
 
 #footer {
+    font-size: 0.8rem;
 }
 
 /*********************************************************************************/
@@ -437,7 +421,7 @@ ul.contact li a.icon-rss:before {
 
 #copyright p {
     text-align: center;
-    font-size: 1em;
+    font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.3);
 }
 
@@ -487,36 +471,33 @@ ul.contact li a.icon-rss:before {
 }
 
 #three-column .title h2 {
-    font-weight: bold;
+    font-weight: normal;
     color: rgba(0, 0, 0, 0.8);
 }
 
 #three-column .title .byline {
     text-align: center;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(0, 0, 0, .9);
 }
 
-
-/* Tablet Landscape */
-@media screen and (max-width: 1060px) {
+@media (min-width: 640px) {
     body {
-        width: 100%;
+        font-size: 1rem;
     }
 
-    body {
-        width: 100%;
-        margin-left: 3%;
-    }
-}
-
-/* Tabled Portrait */
-@media screen and (max-width: 768px) {
-    body {
-        width: 100%;
+    .container {
+        overflow: auto;
+        margin: 0em auto;
+        width: 1200px;
     }
 
-    body {
-        width: 100%;
-        margin: 0;
-        border: none;
+    @media (min-width: 960px) {
+        body {
+            font-size: 1rem;
+        }
+    }
+    @media (min-width: 1100px) {
+        body {
+            font-size: 1rem;
+        }
     }
