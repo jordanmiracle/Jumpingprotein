@@ -14,7 +14,6 @@ form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
     border: 0;
     font: inherit;
     vertical-align: baseline;
-    overflow: auto;
 }
 
 body {
@@ -60,9 +59,9 @@ a:hover {
 }
 
 .container {
-    overflow: auto;
+    overflow: hidden;
     margin: 0em auto;
-    width: 1200px;
+    width: 100%;
 }
 
 /*********************************************************************************/
@@ -486,7 +485,6 @@ ul.contact li a.icon-rss:before {
     }
 
     .container {
-        overflow: auto;
         margin: 0em auto;
         width: 1200px;
     }
@@ -501,3 +499,4 @@ ul.contact li a.icon-rss:before {
             font-size: 1rem;
         }
     }
+}
