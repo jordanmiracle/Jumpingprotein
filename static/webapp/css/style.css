@@ -6,8 +6,7 @@ blockquote, pre, a, address,
 img, ins, kbd, q, s, samp, small, strike, strong,
 sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
- footer, header, hgroup, menu, nav
-{
+footer, header, hgroup, menu, nav {
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -279,10 +278,15 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
     position: relative;
     padding: 5em 0em 7em 0em;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
-    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
+    background: hsla(221, 45%, 73%, 1);
+
+    background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1);
     background-size: cover;
 }
 
@@ -442,7 +446,7 @@ ul.contact li a.icon-rss:before {
 #welcome {
     position: relative;
     padding: 7em 0em 7em 0em;
-    background: #3d3f15;
+    background: #39599f;
     background-size: cover;
     text-align: center;
 }
