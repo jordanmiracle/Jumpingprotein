@@ -278,15 +278,9 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
     position: relative;
     padding: 5em 0em 7em 0em;
-    background: hsla(221, 45%, 73%, 1);
-
-    background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
-
-    background: -moz-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
-
-    background: -webkit-linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
-
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9BAFD9", endColorstr="#103783", GradientType=1);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
+    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
     background-size: cover;
 }
 
@@ -465,6 +459,11 @@ ul.contact li a.icon-rss:before {
 /*********************************************************************************/
 /* Extra                                                                         */
 /*********************************************************************************/
+#three-column {
+  column-count: 1;
+  column-gap: 25px;
+  column-rule: 2px solid #FFFFFF;
+}
 
 #three-column {
     text-align: center;
@@ -488,24 +487,3 @@ ul.contact li a.icon-rss:before {
     color: rgba(0, 0, 0, .9);
 }
 
-@media (min-width: 640px) {
-    body {
-        font-size: 1rem;
-    }
-
-    .container {
-        margin: 0em auto;
-        width: 1200px;
-    }
-
-    @media (min-width: 960px) {
-        body {
-            font-size: 1rem;
-        }
-    }
-    @media (min-width: 1100px) {
-        body {
-            font-size: 1rem;
-        }
-    }
-}
