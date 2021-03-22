@@ -50,10 +50,9 @@ ol, ul {
 p {
     line-height: 180%;
     min-width: 100px;
-    max-width: 500px;
     min-height: 150px;
     max-height: 300px;
-    flex-flow: row;
+    text-align: center;
 }
 
 strong {
