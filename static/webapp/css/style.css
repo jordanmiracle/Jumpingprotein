@@ -282,9 +282,9 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
     position: relative;
     padding: 5em 0em 7em 0em;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
-    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/header-bg.jpg");
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/children-esnath-bin.jpg");
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/children-esnath-bin.jpg");
+    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/children-esnath-bin.jpg");
     background-size: cover;
 }
 
