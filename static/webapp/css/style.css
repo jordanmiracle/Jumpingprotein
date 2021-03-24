@@ -63,27 +63,33 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
+    color: #f4b942;
+}
+
+a:link {
+    color: #bbbbbb;
+}
+
+
 }
 
 .container {
     overflow: hidden;
     margin: 0em auto;
-    width: 100%;
+    width: 75%;
 }
 
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
 
-.image {
-    display: inline-block;
-}
+
 
 .image img {
     display: block;
-    width: 100%;
-    flex-flow: row;
+    max-width: 75%;
+    height: auto
+
 }
 
 .image-full {
@@ -282,9 +288,9 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
     position: relative;
     padding: 5em 0em 7em 0em;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/children-esnath-bin.jpg");
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/children-esnath-bin.jpg");
-    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/children-esnath-bin.jpg");
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/foggyroad.jpg");
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/foggyroad.jpg");
+    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/foggyroad.jpg");
     background-size: cover;
 }
 
@@ -366,6 +372,7 @@ ul.contact li a.icon-rss:before {
 
 #banner .title h2 {
     font-size: 4em;
+    color: cornsilk;
 }
 
 #banner .title .byline {
@@ -444,7 +451,7 @@ ul.contact li a.icon-rss:before {
 #welcome {
     position: relative;
     padding: 7em 0em 7em 0em;
-    background: #39599f;
+    background: #32381a;
     background-size: cover;
     text-align: center;
 }
