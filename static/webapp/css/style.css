@@ -52,8 +52,9 @@ p {
     min-width: 100px;
     min-height: 150px;
     max-height: 300px;
-    text-align: center;
+
 }
+
 
 strong {
 }
@@ -71,18 +72,26 @@ a:link {
 }
 
 
-}
-
 .container {
     overflow: hidden;
     margin: 0em auto;
     width: 75%;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+
+/* Info Card */
+
+
+
+
 /*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
-
 
 
 .image img {
@@ -288,9 +297,9 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
     position: relative;
     padding: 5em 0em 7em 0em;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/foggyroad.jpg");
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/foggyroad.jpg");
-    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/foggyroad.jpg");
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/crickets-in-hands2ndblur.png");
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands2ndblur.png");
+    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands2ndblur.png");
     background-size: cover;
 }
 
@@ -471,9 +480,9 @@ ul.contact li a.icon-rss:before {
 /* Extra                                                                         */
 /*********************************************************************************/
 #three-column {
-  column-count: 1;
-  column-gap: 25px;
-  column-rule: 2px solid #FFFFFF;
+    column-count: 1;
+    column-gap: 25px;
+    column-rule: 2px solid #FFFFFF;
 }
 
 #three-column {
