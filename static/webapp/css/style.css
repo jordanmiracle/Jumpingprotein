@@ -530,13 +530,13 @@ ul.contact li a.icon-rss:before {
 }
 
 /* Devices smaller than 480 pixels */
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .body{
         font-size: 12px;
     }
     #header-wrapper{
         height:40vw !important;
-        padding-bottom: 10em;
+        padding-bottom: 20em;
     }
 }
 /* Devices smaller than 800 ox but larger than 480px */
