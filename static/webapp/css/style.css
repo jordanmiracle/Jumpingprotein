@@ -323,6 +323,7 @@ ul.contact li a.icon-rss:before {
     display: block;
     height: auto;
     width: 100%;
+    background-position-y: center;
 }
 
 #header {
