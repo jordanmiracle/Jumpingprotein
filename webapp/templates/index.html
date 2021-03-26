@@ -27,7 +27,7 @@
 </head>
 <body>
 <div id="header-wrapper">
-    <div id="header" class="container">
+    <div id="topheader" class="container">
         <div id="logo">
             <h1><a href="#">GCET</a></h1>
         </div>
@@ -57,37 +57,38 @@
         </div>
         <div class="title">
             <h2>Our Mission</h2>
-            <span class="byline">To economically empower the African marginalised society through creativity, innovation and enterprise.</span>
+            <span class="byline">To promote healthier communities through the farming of insects for human and animal consumption.</span>
         </div>
-        <div class="flexbox">
-            <div class="card1">
-                <h3>Our Goals</h3>
-                <p>By the year 2030, we seek to establish flourishing strategic business working partnerships for the
-                    needy. By the year 2040, we envision an empowered Africa attained through successful business
-                    engagements by the
-                    marginalized, for the marginalized.</p>
+        <article class="post">
+            <header>
+                <div class="post-title">
+                    <h2><a href="{% url 'about' %}">Magna sed adipiscing</a></h2>
+                    <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
+                </div>
+                <div class="meta">
+                    <time class="published" datetime="2015-11-01">November 1, 2015</time>
+                    <a href="#" class="author"><span class="name">Jane Doe</span><img
+                            src="{% static 'webapp/images/older-gentleman.jpg' %}"
+                            alt=""/></a>
+                </div>
+            </header>
+            <a href="{% url 'about' %}" class="image featured"><img
+                    src="{% static 'images/woman-pinkshirt-foreground.jpg' %}" alt=""/></a>
+            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
+                placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non
+                congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta
+                lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            <footer>
+                <ul class="actions">
+                </ul>
 
-            </div>
-            <div class="card2">
-                <p>Etiam neque. Vivamus consequat lorem at nisl. Nullam wisi a sem semper eleifend. Donec mattis.
-                    Phasellus
-                    pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis
-                    nunc.</p>
+            </footer>
+        </article>
 
-
-            </div>
-            <div class="card3">
-                <p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus.
-                    Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris
-                    quis
-                    nunc.</p>
-
-            </div>
-
-
-        </div>
 
     </div>
+
+</div>
 </div>
 
 <div id="welcome">
