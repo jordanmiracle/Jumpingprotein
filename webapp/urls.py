@@ -5,7 +5,6 @@ from webapp import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('', views.about, name='about'),
-
+    path('about.html', views.about, name='about'),
 
 ]
