@@ -28,10 +28,12 @@ body {
 .flexbox {
     display: flex;
 }
+
 .flexbox > div {
     flex: 1;
 }
-.card1.card2.card3{
+
+.card1.card2.card3 {
     flex: 50%;
 }
 
@@ -65,12 +67,13 @@ p.card {
 }
 
 .card1,
-.card2{
+.card2 {
     float: left;
-    margin-right:20px;
+    margin-right: 20px;
 }
-.card3{
-    float:right;
+
+.card3 {
+    float: right;
 }
 
 
@@ -103,8 +106,6 @@ a:link {
 
 
 /* Info Card */
-
-
 
 
 /*********************************************************************************/
@@ -531,21 +532,36 @@ ul.contact li a.icon-rss:before {
 }
 
 /* Devices smaller than 480 pixels */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    .body{
-        font-size: 12px;
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+    .body {
+        font-size: 12rem;
     }
-    #header-wrapper{
-        height:40vw !important;
-        padding-bottom: 20em;
+
+    #banner .title h2 {
+        font-size: 2rem;
     }
+    #banner .title .byline{
+        font-size: 1rem;
+    }
+    #banner .button{
+        display: none;
 }
+
+#header-wrapper {
+    height: 40vw !important;
+    padding-bottom: 20em;
+}
+
+}
+
+
 /* Devices smaller than 800 ox but larger than 480px */
-@media only screen and( max-width: 800px) {
+@media only screen and( min-width: 481px ) and ( max-width: 800px) {
     #header-wrapper {
         height: 30vw !important;
         padding-bottom: 10em;
     }
+
     #header-wrapper.background {
 
     }
