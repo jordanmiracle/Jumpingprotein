@@ -17,9 +17,9 @@ footer, header, hgroup, menu, nav {
 body {
     margin: 0;
     padding: 0;
-    background: #635735;
+    background: #54382f38;
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 12pt;
+    font-size: 16px;
     font-weight: 200;
 
 
@@ -306,6 +306,7 @@ ul.contact li a.icon-rss:before {
     position: relative;
     padding: 1em 0em 2em 0em;
     background: #FFF;
+    width: 95%;
 
 }
 
@@ -461,7 +462,7 @@ ul.contact li a.icon-rss:before {
 
 #copyright {
     overflow: auto;
-    padding: 5em 0em;
+    padding: 0em 0em;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -487,6 +488,7 @@ ul.contact li a.icon-rss:before {
     background: #32381a;
     background-size: cover;
     text-align: center;
+    width: 95%;
 }
 
 #welcome .container {
