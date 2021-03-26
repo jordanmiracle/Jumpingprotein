@@ -319,7 +319,7 @@ ul.contact li a.icon-rss:before {
     position: relative;
     padding-top: 0;
     padding-bottom: 8em;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
     background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
     background-size: cover;
@@ -494,7 +494,7 @@ ul.contact li a.icon-rss:before {
 
 #welcome .container {
     width: auto;
-    padding: 0 100px;
+    padding: 0 10px;
     color: rgba(255, 255, 255, 0.8);
 }
 
