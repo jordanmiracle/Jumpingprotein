@@ -319,9 +319,9 @@ ul.contact li a.icon-rss:before {
     position: relative;
     padding-top: 0;
     padding-bottom: 8em;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
-    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands2ndblur-cropped.png") 50% 0 no-repeat;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
+    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
     background-size: cover;
     display: block;
     height: auto;
@@ -498,6 +498,7 @@ ul.contact li a.icon-rss:before {
     color: rgba(255, 255, 255, 0.8);
 }
 
+
 #welcome a {
     color: rgba(255, 255, 255, 1);
 }
@@ -541,6 +542,9 @@ ul.contact li a.icon-rss:before {
     border: solid 1px rgba(160, 160, 160, 0.3);
     margin: 0 0 3em 0;
     position: relative;
+    -webkit-box-shadow: 3px 4px 10px 3px rgba(0,0,0,0.56);
+box-shadow: 3px 4px 10px 3px rgba(0,0,0,0.56);
+    width: 50%;
 }
 
 .post > header {
