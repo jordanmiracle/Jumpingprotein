@@ -1,0 +1,12 @@
+{
+  "short_name": "Jumping Protein",
+  "name": "Jumping Protein: A Division of the Glorified Community Empowerment Trust",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}

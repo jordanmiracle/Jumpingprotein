@@ -14,7 +14,11 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="Esnath Divasoni">
+    <link rel="manifest" href="/site.webmanifest">
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
+
     <link rel="stylesheet" href="{% static "webapp/css/style.css" %}">
     <link href="{% static "webapp/css/fonts.css" %}" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -31,14 +35,19 @@
         <div id="logo">
             <h1><a href="#">GCET</a></h1>
         </div>
-        <div id="menu">
-            <ul>
-                <li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
-                <li><a href="{% url 'blog:post_list' %}" accesskey="2" title="">Blog</a></li>
-                <li><a href="{% url 'about' %}" title="">About Us</a></li>
-                <li><a href="#" title="">Gallery</a></li>
-            </ul>
-        </div>
+        <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+            <a href="#" class="logo">logo</a>
+            <div id="menu">
+                <ul>
+                    <li class="active"><a href="{% url 'index' %}" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="{% url 'blog:post_list' %}" accesskey="2" title="">Blog</a></li>
+                    <li><a href="{% url 'about' %}" title="">About Us</a></li>
+                    <li><a href="#" title="">Gallery</a></li>
+                </ul>
+            </div>
     </div>
     <div id="banner" class="container">
         <div class="title">
@@ -63,9 +72,10 @@
             <header>
                 <div class="post-title">
                     <h2><a href="{% url 'about' %}">Statement of need</a></h2>
-                    <p>We know that more than 50 % of the rural population in Zimbabwe is  affected by Food insecurity.
-There is a serious lack of balance diet where Up to 75 % do not consume protein regularly.
-We also k now that there is a rapid Increase in child malnutrition and stunted growth as well as wasting</p>
+                    <p>We know that more than 50 % of the rural population in Zimbabwe is affected by Food insecurity.
+                        There is a serious lack of balance diet where Up to 75 % do not consume protein regularly.
+                        We also k now that there is a rapid Increase in child malnutrition and stunted growth as well as
+                        wasting</p>
                 </div>
                 <div class="meta">
                     <time class="published" datetime="2015-11-01">November 1, 2015</time>
@@ -76,13 +86,15 @@ We also k now that there is a rapid Increase in child malnutrition and stunted g
             </header>
             <a href="{% url 'about' %}" class="image featured"><img
                     src="{% static 'images/woman-pinkshirt-foreground.jpg' %}" alt=""/></a>
-            <p>Why crickets? Crickets are a part of our food culture. My family and others in the community would forage crickets during the lean season. By farming them, we can make them available throughout the year. They have 2.5 times more protein than chicken and a third of the cost of chicken.
-They are climate smart in 3 ways
-    <li>• they need half the feed,
-    • 10x less water than chicken;
-    • and one can produce large volumes in a small plot of land.
-            Finally they are so easy to farm that even those with disabilities or children can be involved.</li>
-</p>
+            <p>Why crickets? Crickets are a part of our food culture. My family and others in the community would forage
+                crickets during the lean season. By farming them, we can make them available throughout the year. They
+                have 2.5 times more protein than chicken and a third of the cost of chicken.
+                They are climate smart in 3 ways
+            <ul>• they need half the feed,
+                • 10x less water than chicken;
+                • and one can produce large volumes in a small plot of land.
+                Finally they are so easy to farm that even those with disabilities or children can be involved.
+            </ul>
             <footer>
                 <ul class="actions">
                 </ul>
@@ -93,7 +105,6 @@ They are climate smart in 3 ways
 
     </div>
 
-</div>
 </div>
 
 <div id="welcome">
