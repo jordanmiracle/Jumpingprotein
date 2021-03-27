@@ -1,12 +1,9 @@
 {
-  "short_name": "Jumping Protein",
   "name": "Jumping Protein: A Division of the Glorified Community Empowerment Trust",
-  "icons": [{
-    "src": "icon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }],
-  "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "short_name": "Jumping Protein",
+  "theme_color": "#32381a",
+  "background_color": "#277dc2",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "https://www.gcetempower.org/"
 }
