@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Jordan Miracle> -- <Software Developer> -- <@jordanmiracle1>
+
+# THANKS
+
+    <Tom>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, Modernizr, Normalize.css, main.css, Parcel, 
