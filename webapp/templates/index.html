@@ -15,7 +15,7 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="Esnath Divasoni">
-    <link rel="manifest" href="{% url /site.webmanifest %}">
+    <link rel="manifest" href="{% static 'jumpingprotein/manifest.webmanifest' %}">
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
@@ -42,21 +42,25 @@
 <div id="header-wrapper">
     <div id="topheader" class="container">
         <div id="logo">
-            <h1><a href="#">GCET</a></h1>
         </div>
-        <nav class="navbar">
-        <span class="navbar-toggle" id="js-navbar-toggle">
-            <i class="fas fa-bars"></i>
-        </span>
-            <a href="#" class="logo">logo</a>
-            <div id="menu">
-                <ul>
-                    <li class="active"><a href="{% url 'index' %}" accesskey="1" title="">Homepage</a></li>
-                    <li><a href="{% url 'blog:post_list' %}" accesskey="2" title="">Blog</a></li>
-                    <li><a href="{% url 'about' %}" title="">About Us</a></li>
-                    <li><a href="#" title="">Gallery</a></li>
-                </ul>
-            </div>
+    <div class="navbar">
+		<div class="inner_navbar">
+			<div class="logo">
+				<a href="#"><span>GCET</span></a>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="{% url 'blog:post_list.html' %}">Blog</a></li>
+					<li><a href="#">Gallery</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hamburger">
+			<i class="fas fa-bars"></i>
+		</div>
+	</div>
     </div>
     <div id="banner" class="container">
         <div class="title">

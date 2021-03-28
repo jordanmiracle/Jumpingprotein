@@ -1,6 +1,6 @@
-let mainNav = document.getElementById('js-menu');
-let navBarToggle = document.getElementById('js-navbar-toggle');
+var hamburger = document.querySelector(".hamburger");
+	var menu = document.querySelector(".menu");
 
-navBarToggle.addEventListener('click', function () {
-  mainNav.classList.toggle('active');
-});
+	hamburger.addEventListener("click", function(){
+		menu.classList.toggle("active");
+	})
