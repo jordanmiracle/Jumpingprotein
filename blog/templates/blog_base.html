@@ -10,9 +10,11 @@
 </head>
 <body>
 <div id="content">
-    {% block content %}
-    {% endblock %}
+
 </div>
+{% block content %}{% endblock %}
+
+
 <div id="sidebar">
     <h2>Our Blog</h2>
     <p>The latest {% total_posts %} posts published so far in this blog.</p>
@@ -21,5 +23,11 @@
     <p><a href="{% url "blog:post_feed" %}" title="Subscribe to my RSS feed">RSS feed</a></p>
     <p>Here we detail events and activities surrounding our organization.</p>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 </body>
 </html>
