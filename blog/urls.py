@@ -10,7 +10,5 @@ urlpatterns = [
     path('<int:year>/<int:month>/<int:day>/<slug:post>/',
          views.post_detail,
          name='post_detail'),
-    path('feed/rss/', LatestPostsFeed(), name='post_feed'),
-
-
-]
+    path('feed/rss/', LatestPostsFeed(), name='post_feed')
+    ]

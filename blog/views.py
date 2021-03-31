@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.core.paginator import (Paginator, EmptyPage, PageNotAnInteger)
-from django.views.generic import CreateView
-from .forms import PostForm
 
 
 def post_list(request):
@@ -32,7 +30,3 @@ def post_detail(request, year, month, day, post):
                   {'post': post})
 
 
-class AddPostView(CreateView):
-    model = Post
-    form_class = PostForm
-    template_name = 'blog/add_post.html'
