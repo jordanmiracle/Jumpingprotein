@@ -297,7 +297,7 @@ ul.contact li a.icon-rss:before {
 }
 
 .button:before {
-    border-color: #9e4428;
+    border-color: brown;
     border-top-width: 2px;
     left: 0px;
     top: -5px;
@@ -305,7 +305,7 @@ ul.contact li a.icon-rss:before {
 
 .button:after {
     border-bottom-width: 2px;
-    border-color: #891a27;
+    border-color: brown;
     bottom: -5px;
     right: 0px;
 }
@@ -421,7 +421,7 @@ ul.contact li a.icon-rss:before {
 
 #topheader {
     position: relative;
-    padding: 5em 0em;
+    padding: 0 0;
 }
 
 /*********************************************************************************/
@@ -1353,7 +1353,7 @@ figure {
     right: 2em;
     position: absolute;
     z-index: 100;
-}
+    background: linear-gradient(45deg, brown, transparent)}
 
 @media screen and (max-width: 768px) {
     #fh5co-portfolio-list li a .case-studies-summary {
@@ -1835,15 +1835,15 @@ figure {
 }
 
 .btn.btn-primary {
-    background: #ff5722;
+    background: brown;
     color: #fff;
     border: none !important;
     border: 2px solid transparent !important;
 }
 
-.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
+.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus
     box-shadow: none;
-    background: #ff5722;
+    background: #fff;
     color: #fff !important;
 }
 
@@ -2352,7 +2352,7 @@ figure {
 
 
 #welcome a {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(50, 56, 26, 1);
 }
 
 
@@ -2480,6 +2480,55 @@ figure {
 
 @media screen and (max-width: 768px) {
 
+    .navbar {
+        height: 60px:
+    }
+
+    .navbar .inner_navbar {
+        flex-direction: row;
+    }
+
+    .navbar .menu ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: block;
+        background: #090f1b;
+        width: 100%;
+    }
+
+    .navbar .menu ul li {
+        padding: 10px;
+    }
+
+    .navbar .menu ul li a {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .navbar .hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .navbar .hamburger:hover {
+        color: #5bd485;
+    }
+
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .menu.active {
+        display: block;
+    }
+
 
     .row-bottom-padded-lg {
         padding-bottom: 2em;
@@ -2604,11 +2653,11 @@ figure {
     }
 
     #banner .title h2 {
-        font-size: 1rem;
+        font-size: 4rem;
     }
 
     #banner .title .byline {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     #banner .button {
