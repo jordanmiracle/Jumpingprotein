@@ -312,7 +312,7 @@ ul.contact li a.icon-rss:before {
 
 .button:hover,
 .button.hover {
-    background-color: #885d38;
+    background-color: #885d385e;
 }
 
 .button:hover:before,
@@ -564,7 +564,7 @@ a {
 
 a:hover {
     text-decoration: none !important;
-    color: #ff5722 !important;
+    color: khaki !important;
 }
 
 p, ul, ol {
@@ -1353,7 +1353,7 @@ figure {
     right: 2em;
     position: absolute;
     z-index: 100;
-    background: linear-gradient(45deg, brown, transparent)}
+    background: linear-gradient(45deg, #a52a2ae0, transparent)}
 
 @media screen and (max-width: 768px) {
     #fh5co-portfolio-list li a .case-studies-summary {
