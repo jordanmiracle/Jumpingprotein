@@ -1,6 +1,6 @@
 {% load static %}
 
-<head>{% block head %}
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Jumping Protein</title>
     <meta name="title" content="Jumping Protein">
@@ -34,7 +34,100 @@
 
     <!--[if IE 6]>
     <link href="default_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
-{% endblock head %}
+
+
+<div id="header-wrapper">
+    <div id="topheader" class="container">
+        <div id="logo">
+        </div>
+        <div class="navbar">
+            <div class="inner_navbar">
+                <div class="logo">
+                    <a href="#"><span>GCET</span></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <div id="banner" class="container">
+        <div class="title">
+            <h2>Jumping Protein</h2>
+            <span class="byline">A division of the Glorified Community Empowerment Trust</span>
+        </div>
+        <ul class="actions">
+            <li><a href="#" class="button">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+
+    {% block content %}{% endblock content %}
+
+
+
+    <div id="welcome">
+        <div class="container">
+            <div class="title">
+                <h2>Fusce ultrices fringilla metus</h2>
+                <span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
+            </div>
+            <p>This is <strong>Lorikeet</strong>, a free, fully standards-compliant CSS template designed by
+                <a
+                        href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template
+                are
+                from <a
+                        href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the
+                <a
+                        href="http://templated.co/license">Creative Commons Attribution</a> license, so
+                you're
+                pretty much free
+                to do whatever you want with it (even use it commercially) provided you give us credit for
+                it.
+                Have fun :)
+            </p>
+            <ul class="actions">
+                <li><a href="#" class="button">Etiam posuere</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <footer>
+        </footer>
+    </div>
+    <div id="copyright" class="container">
+        <p><a href="https://thejordanmiracle.com">&copy; Miracle 2021</a>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- jQuery Easing -->
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Waypoints -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/sticky.js' %}"></script>
+
+    <!-- Stellar -->
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <!-- Superfish -->
+    <script src="{% static 'js/hoverIntent.js' %}"></script>
+    <script src="{% static 'js/superfish.js' %}"></script>
+
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
