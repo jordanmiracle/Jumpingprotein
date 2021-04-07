@@ -403,7 +403,7 @@ ul.contact li a.icon-rss:before {
 #header-wrapper {
     position: relative;
     padding-top: 0;
-    padding-bottom: 8em;
+    padding-bottom: 12em;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
     background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
@@ -2653,7 +2653,7 @@ figure {
     }
 
     #banner .title h2 {
-        font-size: 4rem;
+        font-size: 4rem;navbar
     }
 
     #banner .title .byline {
