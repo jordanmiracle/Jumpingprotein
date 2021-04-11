@@ -54,11 +54,11 @@
         <div class="navbar">
             <div class="inner_navbar">
                 <div class="logo">
-                    <a href="#"><span>GCET</span></a>
+                    <a href="{% url 'about' %}"><span>GCET</span></a>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="{% url 'index' %}" class="active">Home</a></li>
                         <li><a href="{% url 'about' %}">About Us</a></li>
                         <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
                         <li><a href="#">Gallery</a></li>
@@ -75,6 +75,7 @@
             <h2>Jumping Protein</h2>
             <span class="byline">A division of the Glorified Community Empowerment Trust</span>
         </div>
+        <script></script>
 
     </div>
 </div>
@@ -115,18 +116,27 @@
             </div>
             <div class="col-md-4">
                 <div class="feature-text">
-                    <h3>Compassion</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia,
-                        there live the blind texts.</p>
+                    <h3>Why Crickets?</h3>
+                    <p>Crickets are a part of our food culture. My family and others in the community would forage
+                        crickets during the lean season. By farming them, we can make them available throughout the
+                        year.
+                        They have 2.5 times more protein than chicken and a third of the cost of chicken. </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature-text">
-                    <h3>Charity</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia,
-                        there live the blind texts.</p>
+                    <h3>Crickets are climate smart</h3>
+                    <ul>
+                        <li>
+                            <p>They need half the feed</p>
+                        </li>
+                        <li>
+                            <p>10 times less water than chickens</p>
+                        </li>
+                        <li>
+                            <p>Large volumes on a small area of land</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -151,40 +161,40 @@
                 <ul id="fh5co-portfolio-list">
 
                     <li class="two-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url({% static 'webapp/images/woman-pinkshirt-foreground.webp' %}); ">
+                        style="background-image: url({% static 'webapp/images/masked-group-sitting.webp' %}); ">
                         <a href="#" class="color-3">
                             <div class="case-studies-summary">
-                                <span>Give Love</span>
-                                <h2>Donation is caring</h2>
+                                <span>Fight</span>
+                                <h2>Food shortages</h2>
                             </div>
                         </a>
                     </li>
 
                     <li class="one-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url(images/cover_bg_3.jpg); ">
+                        style="background-image: url({% static 'webapp/images/best-insects-in-bowl.webp' %}); ">
                         <a href="#" class="color-4">
                             <div class="case-studies-summary">
-                                <span>Give Love</span>
-                                <h2>Donation is caring</h2>
+                                <span>Highly</span>
+                                <h2>Nutritious</h2>
                             </div>
                         </a>
                     </li>
 
                     <li class="one-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url(images/cover_bg_1.jpg); ">
+                        style="background-image: url({% static 'webapp/images/insect-protein.webp' %}); ">
                         <a href="#" class="color-5">
                             <div class="case-studies-summary">
-                                <span>Give Love</span>
-                                <h2>Donation is caring</h2>
+                                <span>Lower</span>
+                                <h2>Water Consumption</h2>
                             </div>
                         </a>
                     </li>
                     <li class="two-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url(images/cover_bg_3.jpg); ">
+                        style="background-image: url({% static 'webapp/images/children-esnath-bin.webp' %}); ">
                         <a href="#" class="color-6">
                             <div class="case-studies-summary">
-                                <span>Give Love</span>
-                                <h2>Donation is caring</h2>
+                                <span>Demands</span>
+                                <h2>Less Labor</h2>
                             </div>
                         </a>
                     </li>
@@ -270,22 +280,12 @@
                 <h2>Fusce ultrices fringilla metus</h2>
                 <span class="byline">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</span>
             </div>
-            <p>This is <strong>Lorikeet</strong>, a free, fully standards-compliant CSS template designed by
-                <a
-                        href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template
-                are
-                from <a
-                        href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the
-                <a
-                        href="http://templated.co/license">Creative Commons Attribution</a> license, so
-                you're
-                pretty much free
-                to do whatever you want with it (even use it commercially) provided you give us credit for
-                it.
-                Have fun :)
+            <p>
+
+
             </p>
             <ul class="actions">
-                <li><a href="#" class="button">Etiam posuere</a></li>
+                <li><a href="#" class="button">contact us</a></li>
             </ul>
         </div>
     </div>
