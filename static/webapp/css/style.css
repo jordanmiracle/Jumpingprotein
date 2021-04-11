@@ -312,7 +312,7 @@ ul.contact li a.icon-rss:before {
 
 .button:hover,
 .button.hover {
-    background-color: #885d385e;
+    background-color: #ffffffbd;
 }
 
 .button:hover:before,
@@ -412,8 +412,8 @@ ul.contact li a.icon-rss:before {
     height: auto;
     width: 100%;
     background-position-y: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
 
@@ -556,7 +556,7 @@ body.fh5co-offcanvas {
 }
 
 a {
-    color: #ff5722;
+    color: #ffffff;
     -webkit-transition: 0.5s, ease;
     -o-transition: 0.5s, ease;
     transition: 0.5s, ease;
@@ -635,6 +635,260 @@ figure {
     color: white !important;
 }
 
+/*********** About ***********/
+
+
+.paragraph {
+    padding-right: 10em;
+    font-size: 1.25rem;
+    max-width: 75%;
+    margin: 20px;
+}
+
+.w-col.w-col-9 {
+    padding-left: 10em;
+    padding-right: 100px;
+}
+
+.w-col {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.w-col-1 {
+    width: 8.33333333%;
+}
+
+.w-col-2 {
+    width: 16.66666667%;
+}
+
+.w-col-3 {
+    width: 25%;
+}
+
+.w-col-4 {
+    width: 33.33333333%;
+}
+
+.w-col-5 {
+    width: 41.66666667%;
+}
+
+.w-col-6 {
+    width: 50%;
+}
+
+.w-col-7 {
+    width: 58.33333333%;
+}
+
+.w-col-8 {
+    width: 66.66666667%;
+}
+
+.w-col-9 {
+    width: 75%;
+}
+
+.w-col-10 {
+    width: 83.33333333%;
+}
+
+.w-col-11 {
+    width: 91.66666667%;
+}
+
+.w-col-12 {
+    width: 100%;
+}
+
+.w-richtext:before,
+.w-richtext:after {
+    content: " ";
+    display: table;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+
+.w-richtext:after {
+    clear: both;
+}
+
+.w-richtext[contenteditable="true"]:before,
+.w-richtext[contenteditable="true"]:after {
+    white-space: initial;
+}
+
+.w-richtext ol,
+.w-richtext ul {
+    overflow: hidden;
+}
+
+.w-richtext .w-richtext-figure-selected.w-richtext-figure-type-video div:after,
+.w-richtext .w-richtext-figure-selected[data-rt-type="video"] div:after {
+    outline: 2px solid #2895f7;
+}
+
+.w-richtext .w-richtext-figure-selected.w-richtext-figure-type-image div,
+.w-richtext .w-richtext-figure-selected[data-rt-type="image"] div {
+    outline: 2px solid #2895f7;
+}
+
+.w-richtext figure.w-richtext-figure-type-video > div:after,
+.w-richtext figure[data-rt-type="video"] > div:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.w-richtext figure {
+    position: relative;
+    max-width: 60%;
+}
+
+.w-richtext figure > div:before {
+    cursor: default !important;
+}
+
+.w-richtext figure img {
+    width: 100%;
+}
+
+.w-richtext figure figcaption.w-richtext-figcaption-placeholder {
+    opacity: 0.6;
+}
+
+.w-richtext figure div {
+    /* fix incorrectly sized selection border in the data manager */
+    font-size: 0px;
+    color: transparent;
+}
+
+.w-richtext figure.w-richtext-figure-type-image,
+.w-richtext figure[data-rt-type="image"] {
+    display: table;
+}
+
+.w-richtext figure.w-richtext-figure-type-image > div,
+.w-richtext figure[data-rt-type="image"] > div {
+    display: inline-block;
+}
+
+.w-richtext figure.w-richtext-figure-type-image > figcaption,
+.w-richtext figure[data-rt-type="image"] > figcaption {
+    display: table-caption;
+    caption-side: bottom;
+}
+
+.w-richtext figure.w-richtext-figure-type-video,
+.w-richtext figure[data-rt-type="video"] {
+    width: 60%;
+    height: 0;
+}
+
+.w-richtext figure.w-richtext-figure-type-video iframe,
+.w-richtext figure[data-rt-type="video"] iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.w-richtext figure.w-richtext-figure-type-video > div,
+.w-richtext figure[data-rt-type="video"] > div {
+    width: 100%;
+}
+
+.w-richtext figure.w-richtext-align-center {
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+}
+
+.w-richtext figure.w-richtext-align-center.w-richtext-figure-type-image > div,
+.w-richtext figure.w-richtext-align-center[data-rt-type="image"] > div {
+    max-width: 100%;
+}
+
+.w-richtext figure.w-richtext-align-normal {
+    clear: both;
+}
+
+.w-richtext figure.w-richtext-align-fullwidth {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    clear: both;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.w-richtext figure.w-richtext-align-fullwidth > div {
+    display: inline-block;
+    /* padding-bottom is used for aspect ratios in video figures
+        we want the div to inherit that so hover/selection borders in the designer-canvas
+        fit right*/
+    padding-bottom: inherit;
+}
+
+.w-richtext figure.w-richtext-align-fullwidth > figcaption {
+    display: block;
+}
+
+.w-richtext figure.w-richtext-align-floatleft {
+    float: left;
+    margin-right: 15px;
+    clear: none;
+}
+
+.w-richtext figure.w-richtext-align-floatright {
+    float: right;
+    margin-left: 15px;
+    clear: none;
+}
+
+.paragraph {
+    padding-left: 20px;
+}
+
+.bold-text {
+    font-family: 'Droid Sans', sans-serif;
+}
+
+/*****************************/
+
+/*********** Blog ***********/
+
+#fh5co-blog-section,
+#fh5co-features {
+    padding: 7em 0;
+}
+
+@media screen and (max-width: 768px) {
+    #fh5co-work-section,
+    #fh5co-services-section,
+    #fh5co-content-section,
+    #fh5co-work-section_2,
+    #fh5co-blog-section,
+    #fh5co-features {
+        padding: 4em 0;
+    }
+}
+
+/*****************************/
 @media screen and (max-width: 768px) {
     .header-top .fh5co-link {
         text-align: center;
@@ -1353,7 +1607,8 @@ figure {
     right: 2em;
     position: absolute;
     z-index: 100;
-    background: linear-gradient(45deg, #a52a2ae0, transparent)}
+    background: linear-gradient(45deg, #a52a2ae0, transparent)
+}
 
 @media screen and (max-width: 768px) {
     #fh5co-portfolio-list li a .case-studies-summary {
@@ -1842,9 +2097,16 @@ figure {
 }
 
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus
-    box-shadow: none;
-    background: #fff;
-    color: #fff !important;
+box-shadow: none
+
+;
+background: #fff
+
+;
+color: #fff
+
+!important
+;
 }
 
 .btn:hover, .btn:active, .btn:focus {
@@ -2653,7 +2915,7 @@ figure {
     }
 
     #banner .title h2 {
-        font-size: 4rem;navbar
+        font-size: 4rem;
     }
 
     #banner .title .byline {
@@ -2734,7 +2996,6 @@ figure {
         }
     }
 }
-
 
 
 
