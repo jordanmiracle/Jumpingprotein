@@ -2,28 +2,32 @@
 {% load static %}
 {% block title %}Our Blog{% endblock %}
 
-<div class="container"></div>
 {% block content %}
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <title></title>
+    </head>
+    <h1>Welcome to the Jumping Protein Blog!</h1>
+    <h6>This is where you will find all current events, and news surround GCET and Jumping Protein!</h6>
 
-
-    <h1>Our Blog</h1>
     {% for post in posts %}
         <div class="container">
             <div class="mt-3">
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h2 class="card-title"><a
-                                href="{{ post.get_absolute_url }}"><a href="{{ post.title|safe }}">{{ post.slug }}</a>
-                        </h2></div>
-                    <p class="card-text">{{ post.body|safe|truncatewords:30|linebreaks }}</p>
-                    <p class="card-text"><small class="text-muted">Published {{ post.publish }}
-                        by {{ post.author }}</small></p>
+                        <h5 class="card-title"><a href="{{ post.slug }}">{{ post.title }}</a></h5>
+                        <p class="card-text">        {{ post.body|safe|linebreaksbr|truncatechars:100 }}
+                        </p>
+                        <p class="card-text"><small class="text-muted">Published: {{ post.created }}</small></p>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <p class="date">
+            Published {{ post.publish|safe }} by {{ post.author }}
+        </p>
 
 
     {% endfor %}
-    {% include "blog/pagination.html" with page=posts %}
-{% endblock %}
+{% endblock content %}
