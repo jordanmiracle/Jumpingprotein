@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
     <link rel="stylesheet" href="{% static "webapp/css/style.css" %}">
+    <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
+
     <link href="{% static 'css/normalize.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/webflow.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static "webapp/css/fonts.css" %}" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content=" IE=edge,chrome=1">
@@ -43,75 +44,48 @@
 </head>
 
 {% block content %}
+    <script>$(window).scroll(function (e) {
+        parallax();
+    });
 
-        <div class="select2-container--focus">
-                <div class="coll-md-8 card mb-4 mt-3 left top">
-                    <div class="card-body">
-                        Glorified Community Empowerment Trust (GCET) is an</head>
-
-
-        <div class="select2-container--focus">
-                <div class="coll-md-8 card mb-4 mt-3 left top">
-                    <div class="card-body">
-                        Glorified Community Empowerment Trust (GCET) is an
-                        organisation found on values of economic empowerment
-                        is run by and for the marginalized communities.  Through own capital, appeals, grants and loans,
-                        capitalized economic ventures will improve the standa
-                        organisation found on values of economic empowerment
-                        is run by and for the marginalized communities.  Through own capital, appeals, grants and loans,
-                        capitalized economic ventures will improve the standathrough servant leadership and
-                        volunteerism.It
-                        is run by and for the marginalized communities.  Through own capital, appeals, grants and loans,
-                        capitalized economic ventures will improve the standard of living and create a positive change.
-                        GCET
-                        has a pool of expert consultants whose mission is poverty alleviation achieved by tailor-making
-                        community solutions to end poverty of all forms.
-
-                        <h2>Statement of Need</h2>
-                        <p>Ourmarginal societies suffer from innate poverty. Orphans and vulnerablechildren, persons
-                            with a
-                            disability, widows, the elderly and alsoyoung rural women are the hardest hit. These
-                            individuals and
-                            groupslive on less than a dollar a day. </p>
-                        <p>Thereare massive food shortages in the communities. They are deprived froma decent meal hence
-                            prone
-                            to malnutrition diseases. Most of them liveon two light meals per day to keep them alive. A
-                            balanced
-                            diet inthis context is usually a nightmare. For those in elderly homes andorphanages food
-                            supply is
-                            a great challenge. Most communities havelittle to none good floors of income to sustain them
-                            hence
-                            the needto establish some projects.</p>
-                        <p>Educationis a cornerstone to human kind however poverty has denied our belovedcommunities.
-                            Most
-                            marginalised communities are not able to attendschool due to lack of incomes to meet the
-                            school fees
-                            demand. A highrate of dropouts is experienced. A majority of these will contributeto a low
-                            literacy
-                            rate and create vulnerable communities. </p>
-                        <p>Themajority of the population in context has no decent shelter. It isusually a situation of
-                            overpopulation or exposure to harsh weatherand failure to afford basic utilities. These need
-                            a good
-                            income andsome projects would be best suited a lasting solution.</p>
-                        <p>Medicalbills have posed a life threatening situation. In the face of thepandemics the poor
-                            cannot
-                            survive the costs even the medical subsidycannot reach far to them. HIV/AIDS, malaria corona
-                            virus
-                            and cancerto name a few have robed our loved ones due to poverty. </p>
-                        <p>Throughincome generating projects at both individual and institutionallevels more income can
-                            be
-                            generated to sustain a life. Communitieshave either tried and gave up or contemplated
-                            starting
-                            incomegenerating projects to address their basic needs. GCET is there tobridge the knowledge
-                            gap and
-                            empower communities throughentrepreneurship. Projects will be from all sectors of the
-                            economywith a
-                            major thrust in agriculture.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    function parallax() {
+        var scrolled = $(window).scrollTop();
+        $('.bg').css('top', -(scrolled * 0.2) + 'px');
+    }</script>
+    <div class="bg-info">
+        <section>
+            <h2 class="text-center">About Us</h2>
+            <HR WIDTH="75%" COLOR="red" SIZE="4">
+            Glorified Community Empowerment Trust (GCET) is an organisation found on values of economic
+            empowerment through servant leadership and volunteerism. It is run by and for the
+            marginalised
+            communities. Through own capital, appeals, grants and loans, capitalised economic ventures
+            will
+            improve the standard of living and create a positive change. GCET has a pool of expert
+            consultants
+            whose mission is poverty alleviation achieved by tailor-making community solutions to end
+            poverty of
+            all forms.
+            GCET is a mother organisation to Jumping Protein, Crotchet Consultancy, with GCET itself
+            operating as a charity organization.
+        </section>
     </div>
+
+
+
+
+    <h2 class="text-center">Our Vision</h2>
+    <HR WIDTH="75%" COLOR="red" SIZE="2">
+    <span class="fa-columns">An economically limitless Africa</span>
+    <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+
+
     </html>
 
 {% endblock content %}

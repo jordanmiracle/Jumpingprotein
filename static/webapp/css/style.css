@@ -636,6 +636,22 @@ figure {
 }
 
 /*********** About ***********/
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+}
+
+section {
+    color: #000000;
+    font-family: arial;
+    width: 500px;
+    margin: auto;
+    line-height: 20px;
+    font-size: 16px;
+}
 
 
 .paragraph {
@@ -1514,6 +1530,7 @@ figure {
     .feature-left .feature-copy {
         width: 80%;
     }
+
 }
 
 .feature-left .feature-copy h3 {
