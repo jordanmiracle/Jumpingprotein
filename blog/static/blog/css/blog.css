@@ -41,5 +41,16 @@ p.date {
     font-style: italic;
 }
 
+.navbar-custom {
+    background-color: #2b542c;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+
 
 
