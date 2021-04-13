@@ -12,56 +12,45 @@
     <title>{% block title %}{% endblock %}</title>
     <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
 </head>
-<body>
-<div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-</div>
-    <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">GCET</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
-                    </li>
-                </ul>
-
+<body><div class="navbar">
+            <div class="inner_navbar">
+                <div class="logo">
+                    <a href="{% url 'about' %}"><span>GCET</span></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-</div>
-</nav>
-<br>
+    </div>
+            <br><br><br>
+
+
+        {% block content %}{% endblock %}
 <div class="container">
     <div class="flex-column">
-        {% block content %}{% endblock %}
+        <div id="sidebar">
+            <div class="text-dark">
+                <h2>Our Blog</h2>
+                <p>The latest {% total_posts %} posts published so far in this blog.</p>
+                <h3>Latest Posts</h3>
+                {% render_latest_posts 2 %}
+                <p><a href="{% url "blog:post_feed" %}" title="Subscribe to my RSS feed">RSS feed</a></p>
+                <p>Here we detail events and activities surrounding our organization.</p>
+            </div>
+        </div>
     </div>
 </div>
 
-<div id="sidebar">
-    <div class="text-dark">
-        <h2>Our Blog</h2>
-        <p>The latest {% total_posts %} posts published so far in this blog.</p>
-        <h3>Latest Posts</h3>
-        {% render_latest_posts 2 %}
-        <p><a href="{% url "blog:post_feed" %}" title="Subscribe to my RSS feed">RSS feed</a></p>
-        <p>Here we detail events and activities surrounding our organization.</p>
-    </div>
-</div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

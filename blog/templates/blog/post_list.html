@@ -18,15 +18,16 @@
                         <h5 class="card-title"><a href="{{ post.slug }}">{{ post.title }}</a></h5>
                         <p class="card-text">        {{ post.body|safe|linebreaksbr|truncatechars:100 }}
                         </p>
-                        <p class="card-text"><small class="text-muted">Published: {{ post.created }}</small></p>
+                        <p class="card-text"><small class="text-muted">
+                        <p class="date">
+                            Published {{ post.publish|safe }} by {{ post.author }}
+                        </p></small></p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <p class="date">
-            Published {{ post.publish|safe }} by {{ post.author }}
-        </p>
+
 
 
     {% endfor %}
