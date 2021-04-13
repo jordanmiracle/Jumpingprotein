@@ -155,3 +155,8 @@ hamburger.addEventListener("click", function () {
 $(document).ready(function () {
     $("#header").fadeIn(3000);
 });
+
+$(window).load(function(){
+    $(".h2").hide().fadeIn("");
+});
+
