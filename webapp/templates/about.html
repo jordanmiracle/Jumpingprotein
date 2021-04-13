@@ -44,14 +44,7 @@
 </head>
 
 {% block content %}
-    <script>$(window).scroll(function (e) {
-        parallax();
-    });
 
-    function parallax() {
-        var scrolled = $(window).scrollTop();
-        $('.bg').css('top', -(scrolled * 0.2) + 'px');
-    }</script>
     <div class="bg-info">
         <section>
             <h2 class="text-center">About Us</h2>
@@ -71,21 +64,5 @@
         </section>
     </div>
 
-
-
-
-    <h2 class="text-center">Our Vision</h2>
-    <HR WIDTH="75%" COLOR="red" SIZE="2">
-    <span class="fa-columns">An economically limitless Africa</span>
-    <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-
-
-    </html>
 
 {% endblock content %}
