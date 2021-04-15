@@ -12,6 +12,7 @@ class PublishedManager(models.Manager):
 
 
 class Post(models.Model):
+    id = models.BigAutoField(primary_key=True)
     STATUS_CHOICES = (
         ('draft', 'Draft'),
         ('published', 'Published'),
