@@ -60,7 +60,8 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'webapp',
     'blog',
-    'ckeditor'
+    'ckeditor',
+    'gallery.apps.GalleryConfig',
 
 ]
 
@@ -80,7 +81,10 @@ ROOT_URLCONF = 'jumpingprotein.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/miracle/websites/jumpingprotein/blog/templates/blog',
+                 '/home/miracle/websites/jumpingprotein/gallery/templates/gallery',
+                 '/home/miracle/websites/jumpingprotein/webapp/templates',
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
