@@ -50,6 +50,10 @@ ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    'webapp',
+    'blog',
+    'ckeditor',
+    'gallery.apps.GalleryConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,11 +62,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'webapp',
-    'blog',
-    'ckeditor',
-    'gallery.apps.GalleryConfig',
-
 ]
 
 MIDDLEWARE = [

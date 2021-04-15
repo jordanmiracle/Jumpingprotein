@@ -6,8 +6,8 @@ def gallery(request):
 
 
 def add(request):
-    return render(request, 'gallery/gallery.html', {})
+    return render(request, 'gallery/add.html', {})
 
 
-def photo(request):
-    return render(request, 'gallery/gallery.html', {})
+def viewPhoto(request):
+    return render(request, 'gallery/photo.html', {})
