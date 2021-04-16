@@ -80,10 +80,7 @@ ROOT_URLCONF = 'jumpingprotein.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/miracle/websites/jumpingprotein/blog/templates/blog',
-                 '/home/miracle/websites/jumpingprotein/gallery/templates/gallery',
-                 '/home/miracle/websites/jumpingprotein/webapp/templates',
-                 ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
