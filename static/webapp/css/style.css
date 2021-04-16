@@ -382,12 +382,10 @@ ul.contact li a.icon-rss:before {
 
 .title {
     margin-bottom: 3em;
-    font-family: "Source Code Pro", serif;
-    font-size: 2.3em;
 }
 
 .title h2 {
-    font-size: 2.3em;
+    font-size: 2.7em;
 
 }
 
@@ -523,7 +521,7 @@ ul.contact li a.icon-rss:before {
 }
 
 #banner .title h2 {
-    font-size: 3.5em;
+    font-size: 4em;
     color: khaki;
     margin-top: revert;
 }
@@ -579,7 +577,7 @@ p, ul, ol {
     font-size: 16px;
     color: #848484;
     font-family: "Open Sans", Arial, sans-serif;
-    list-style: none;
+    list-style: inside;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -764,10 +762,6 @@ h1 {
 .demo-styling > * {
     color: #222;
     padding: 0.5rem;
-}
-
-.about-wrapper {
-    margin: 15px;
 }
 
 /*****************************/
