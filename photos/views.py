@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import Category, Photo
+
+
 # Create your views here.
 
 
 def gallery(request):
     category = request.GET.get('category')
-    if category == None:
+    if category is None:
         photos = Photo.objects.all()
     else:
         photos = Photo.objects.filter(category__name=category)
