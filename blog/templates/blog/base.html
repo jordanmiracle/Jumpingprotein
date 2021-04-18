@@ -13,29 +13,30 @@
     <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet">
 </head>
 
-<body><div class="navbar">
-            <div class="inner_navbar">
-                <div class="logo">
-                    <a href="{% url 'about' %}"><span>GCET</span></a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="{% url 'index' %}" class="active">Home</a></li>
-                        <li><a href="{% url 'about' %}">About Us</a></li>
-                        <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
-                        <li><a href="#">Gallery</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+<body>
+<div class="navbar">
+    <div class="inner_navbar">
+        <div class="logo">
+            <a href="{% url 'about' %}"><span>GCET</span></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'blog:post_list' %}">Blog</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
         </div>
     </div>
-            <br><br><br>
+    <div class="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+</div>
+<br><br><br>
 
 
-        {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 <div class="container">
     <div class="flex-column">
         <div id="sidebar">
@@ -43,12 +44,12 @@
                 <h2>Our Blog</h2>
                 <p>The latest {% total_posts %} posts published so far in this blog.</p>
                 <h3>Latest Posts</h3>
-                {% render_latest_posts 2 %}
                 <p><a href="{% url "blog:post_feed" %}" title="Subscribe to my RSS feed">RSS feed</a></p>
                 <p>Here we detail events and activities surrounding our organization.</p>
             </div>
         </div>
     </div>
+
 </div>
 
 

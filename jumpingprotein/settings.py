@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 import json
 from django.core.exceptions import ImproperlyConfigured
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -53,7 +55,7 @@ INSTALLED_APPS = [
     'webapp',
     'blog',
     'ckeditor',
-    'gallery.apps.GalleryConfig',
+    'photos.apps.PhotosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -99,14 +101,14 @@ WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'USER': 'jordanmiracle',
-       'NAME': 'jpblogdb',
-       'HOST': 'localhost',
-       'PASSWORD': get_secret('DB_PASSWORD'),
-       'PORT': '',
-   },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'USER': 'jordanmiracle',
+        'NAME': 'jpblogdb',
+        'HOST': 'localhost',
+        'PASSWORD': get_secret('DB_PASSWORD'),
+        'PORT': '',
+    },
 }
 
 FIXTURE_DIRS = [
@@ -147,11 +149,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     'blog/static/',
+    'photos/static/'
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'static/images'
+MEDIA_URL = '/media/images/'
+
+STATICFILES = [
+    BASE_DIR / 'static'
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles'

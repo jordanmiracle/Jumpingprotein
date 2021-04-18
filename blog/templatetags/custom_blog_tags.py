@@ -10,7 +10,7 @@ def total_posts():
     return Post.published.count()
 
 
-@register.inclusion_tag('blog/latest_posts.html')
+@register.inclusion_tag('blog/../templates/latest_posts.html')
 def render_latest_posts(count=5):
     latest_posts = Post.published.order_by('-publish')[:count]
     return {'latest_posts': latest_posts}
