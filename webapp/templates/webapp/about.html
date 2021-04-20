@@ -18,6 +18,9 @@
     <link rel="manifest" href="{% static 'jumpingprotein/manifest.webmanifest' %}">
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
     <link rel="stylesheet" href="{% static "webapp/css/style.css" %}">
     <link href="{% static 'css/normalize.css' %}" rel="stylesheet" type="text/css">
@@ -25,6 +28,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content=" IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
+
     <script type="text/javascript">
         var bodyCacheable = true;
 
@@ -43,120 +47,155 @@
 
 {% block content %}
     <style>
-    #header-wrapper {
-    position: relative;
-    padding-top: 0;
-    padding-bottom: 3em;
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
-    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
-    background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
-    background-size: cover;
-    display: block;
-    height: auto;
-    width: 100%;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
-}</style>
+        #header-wrapper {
+            position: relative;
+            padding-top: 0;
+            padding-bottom: 3em;
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
+            background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
+            background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
+            background-size: cover;
+            display: block;
+            height: auto;
+            width: 100%;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(51, 51, 51, 0.3);
+            position: absolute;
+            top: 0;
+            z-index: 5;
+        }
+
+        .header {
+            width: 100%;
+            height: 500px;
+            opacity: .8;
+            background-color: rgb(30, 173, 255);
+            background-image: url('https://res.cloudinary.com/arpr/image/upload/v1541394028/architecture-building-campus-207684.jpg');
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .h1 {
+            color: #2b542c;
+        }
 
 
-  <article class="grid demo-styling">
-        <header class="headline">
-            <h1>Our Vision</h1>
-            <h2>An economically limitless Africa</h2>
-        </header>
+    </style>
 
-        <div class="text-block">
-            <p>Glorified Community Empowerment Trust (GCET) is an organisation found on values of economic empowerment
-                through servant leadership and volunteerism. It is run by and for the marginalised communities. Through
-                own capital, appeals, grants and loans, capitalised economic ventures will improve the standard of
-                living and create a positive change. GCET has a pool of expert consultants whose mission is poverty
-                alleviation achieved by tailor-making community solutions to end poverty of all forms.
-                GCET is a mother organisation to
-                Jumping Protein,
-                Crotchet consultancy,
-                and GCET itself operates as charity organisation </p>
-        </div>
+    <body>
 
-        <div class="text-block">
-            <div class="image-wrapper">
-                <header class="headline">
-                </header>
+
+    <div class="container">
+
+        <div class="about">
+            <div class="left">
+                <h1>About us</h1>
+                <hr>
+                <p>Glorified Community Empowerment Trust (GCET) is an organisation found on values of economic
+                    empowerment through servant leadership and volunteerism. It is run by and for the marginalised
+                    communities. Through own capital, appeals, grants and loans, capitalised economic ventures will
+                    improve the standard of living and create a positive change. GCET has a pool of expert consultants
+                    whose mission is poverty alleviation achieved by tailor-making community solutions to end poverty of
+                    all forms.
+                    GCET is a mother organisation to: Jumping Protein, Crotchet consultancy, and GCET itself operates as
+                    a charity organisation </p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    etfooter
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.</p>
+
             </div>
-            <header class="headline">
+            <div class="right">
+                <img src="{% static 'webapp/images/older-gentleman.webp' %}" height=500px width=auto" alt="">
+            </div>
+            <div class="clear"></div>
+        </div>
 
+
+        <div class="mission">
+
+            <div class="left">
+                <img src="{% static 'webapp/images/group-sitting.webp' %}">
+            </div>
+            <div class="right">
                 <h1>Background</h1>
-            </header>
-            <p>Glorified Community Empowerment Trust is a gateway to success organisation whose goal is to empower
-                the marginalised societies in Zimbabwean and across Africa through business trainings and
-                investments. The organisation was formed in 2018. GCET is an entrepreneurial based organisation that
-                serves the community through creativity, innovation and enterprise.
-                We derive our joy from empowering people with disabilities, young rural women in business and those
-                wishing to start businesses, orphans, widows the elderly and vulnerable children. We also support
-                parent support groups who have entrepreneurship as one of their pillars to alleviate poverty.
-                Poverty has deprived our society of basic human needs like food, clothing, shelter, medication and
-                education. This has impacted heavily on success pathway institutions like orphanages elderly homes
-                and churches caring for the distressed in their areas of operation. Our team of business consultants
-                identifies the need, strategize the solution, tailor make trainings, deliver and monitor
-                implementation.
-                Our project timeframe is a three year period per district to enable business growth and evaluations.
-                During this period investments in trainings, business capitalisation, further development,
-                evaluations and reviews will take place. A project replication
-                plan will be crafted tailor-made to
-                suit the intended community.</p>
+                <hr>
+                <p>Glorified Community Empowerment Trust is a gateway to success organisation whose goal is to empower
+                    the marginalised societies in Zimbabwean and across Africa through business trainings and
+                    investments. The organisation was formed in 2018. GCET is an entrepreneurial based organisation that
+                    serves the community through creativity, innovation and enterprise. </p>
+
+                <p>We derive our joy from empowering people with disabilities, young rural women in business and those
+                    wishing to start businesses, orphans, widows the elderly and vulnerable children. We also support
+                    parent support groups who have entrepreneurship as one of their pillars to alleviate poverty. </p>
+
+                <p>Poverty has deprived our society of basic human needs like food, clothing, shelter, medication and
+                    education. This has impacted heavily on success pathway institutions like orphanages elderly homes
+                    and churches caring for the distressed in their areas of operation. Our team of business consultants
+                    identifies the need, strategize the solution, tailor make trainings, deliver and monitor
+                    implementation.</p>
+
+                <p>Our project timeframe is a three year period per district to enable business growth and evaluations.
+                    During this period investments in trainings, business capitalisation, further development,
+                    evaluations and reviews will take place. A project replication plan will be crafted tailor-made to
+                    suit the intended community.</p>
+
+            </div>
+            <div class="clear"></div>
+
         </div>
 
-        <header class="headline">
 
-        </header>
-        <div class="text-block">
-            <h1>Statement of Need</h1>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+    </body>
 
-            <p>Our marginal societies suffer from innate poverty. Orphans and vulnerable children, persons with a
-                disability, widows, the elderly and also young rural women are the hardest hit. These individuals and
-                groups live on less than a dollar a day.
-                There are massive food shortages in the communities. They are deprived from a decent meal hence prone to
-                malnutrition diseases. Most of them live on two light meals per day to keep them alive. A balanced diet
-                in this context is usually a nightmare. For those in elderly homes and orphanages food supply is a great
-                challenge. Most communities have little to none good floors of income to sustain them hence the need to
-                establish some projects.</p>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- jQuery Easing -->
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Waypoints -->
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/sticky.js' %}"></script>
 
-            <p>Education is a cornerstone to human kind however poverty has denied our beloved communities. Most
-                marginalised communities are not able to attend school due to lack of incomes to meet the school fees
-                demand. A high rate of dropouts is experienced. A majority of these will contribute to a low literacy
-                rate and create vulnerable communities. </p>
+    <!-- Stellar -->
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <!-- Superfish -->
+    <script src="{% static 'js/hoverIntent.js' %}"></script>
+    <script src="{% static 'js/superfish.js' %}"></script>
 
-            <p>The majority of the population in context has no decent shelter. It is usually a situation of
-                overpopulation or exposure to harsh weather and failure to afford basic utilities. These need a good
-                income and some projects would be best suited a lasting solution.</p>
-
-            <p>Medical bills have posed a life threatening situation. In the face of the pandemics the poor cannot
-                survive the costs even the medical subsidy cannot reach far to them. HIV/AIDS, malaria corona virus and
-                cancer to name a few have robed our loved ones due to poverty. </p>
-
-            <p>Through income generating projects at both individual and institutional levels more income can be
-                generated to sustain a life. Communities have either tried and gave up or contemplated starting income
-                generating projects to address their basic needs. GCET is there to bridge the knowledge gap and empower
-                communities through entrepreneurship. Projects will be from all sectors of the economy with a major
-                thrust in agriculture.</p>
-        </div>
-        <div class="text-block">
-            <h1>How We Add Value</h1>
-            <p>Our social philanthropy is to address human need in education, food, shelter and medication through
-                partnership and cooperative efforts to end poverty. We help communities identify their community
-                sustainable business solution and help them achieve it. We are a gateway to success through imparting
-                business skills, mentoring and marketing. We are an entrepreneurship based organisation hence we deliver
-                skill through a team of our diverse business experts. </p>
-        </div>
-        <div class="text-block">
-            <p>We are a vehicle to success through voluntary work. We mentor our stakeholders until they achieve their
-                destiny. We believe in combined efforts hence we engage any stakeholder whose goal is to economically
-                emancipate marginalised communities. We believe in the marginalised community engagement for a lasting
-                community solution. Communities decide and manage their projects our role is to empower them to make
-                calculated informed decision</p>
-        </div>
-    </article>
+    <!-- Main JS -->
+    <script src="{% static 'js/main.js' %}"></script>
 
 
 {% endblock content %}
