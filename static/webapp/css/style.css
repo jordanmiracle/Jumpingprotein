@@ -478,10 +478,12 @@ ul.contact li a.icon-rss:before {
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 3px;
+    text-decoration: none;
 }
 
 .navbar .logo a span {
     color: khaki;
+    text-decoration: none;
 }
 
 .navbar .menu ul {
@@ -500,6 +502,7 @@ ul.contact li a.icon-rss:before {
     font-size: 14px;
     letter-spacing: 2px;
     transition: all 0.2s ease;
+    text-decoration: none;
 }
 
 .navbar .menu ul li:last-child a {
@@ -816,8 +819,8 @@ figure {
 
 footer {
     width: 100%;
-    height: 100px;
-    background-color: #28587c;
+    height: 300px;
+    background-color: #32381A;
 }
 
 footer p {
@@ -825,7 +828,6 @@ footer p {
     padding: 0 2%;
 }
 
-/** code by webdevtrick ( https://webdevtrick.com ) **/
 body {
     margin: 0;
     padding: 0;
@@ -841,12 +843,12 @@ body {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
 .footer-distributed {
-    background-color: #292c2f;
+    background-color: #32381A;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -2247,23 +2249,6 @@ footer {
     color: #5a5a5a;
 }
 
-#footer {
-    background: #ff5722;
-    padding: 60px 0 40px;
-}
-
-#footer p {
-    color: white;
-    font-size: 14px;
-}
-
-#footer p a {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-#footer p a:hover, #footer p a:active, #footer p a:focus {
-    color: rgba(255, 255, 255, 0.9) !important;
-}
 
 .btn {
     -webkit-transition: 0.3s;
