@@ -10,11 +10,11 @@ hamburger.addEventListener("click", function () {
 
 
     // iPad and iPod detection
-    var isiPad = function () {
+    const isiPad = function () {
         return (navigator.platform.indexOf("iPad") !== -1);
     };
 
-    var isiPhone = function () {
+    const isiPhone = function () {
         return (
             (navigator.platform.indexOf("iPhone") !== -1) ||
             (navigator.platform.indexOf("iPod") !== -1)
@@ -37,7 +37,7 @@ hamburger.addEventListener("click", function () {
     };
 
     // Parallax
-    var parallax = function () {
+    const parallax = function () {
         $(window).stellar();
     };
 
@@ -160,11 +160,4 @@ $(window).load(function(){
     $(".h2").hide().fadeIn("");
 });
 
-$('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
 
