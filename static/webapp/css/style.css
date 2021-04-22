@@ -987,7 +987,17 @@ footer {
 
     .footer-distributed {
         font: bold 14px sans-serif;
+        height: auto;
+    }
 
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 36px 'Roboto Light', 'sans-serif';
+        margin: 0;
+    }
+
+    .footer-distributed h3 span {
+        color: khaki;
     }
 
     .footer-distributed .footer-left,
@@ -1054,6 +1064,30 @@ footer {
 
     nav {
         height: 80px;
+    }
+
+    .footer-distributed {
+        font: bold 14px sans-serif;
+
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        height: auto;
+    }
+
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+
+    .main {
+        line-height: normal;
+        font-size: auto;
     }
 }
 
@@ -1546,6 +1580,7 @@ footer {
 #fh5co-blog-section,
 #fh5co-features {
     padding: 7em 0;
+    padding-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -2245,24 +2280,6 @@ footer {
 .fh5co-social-icons > a:hover, .fh5co-social-icons > a:focus, .fh5co-social-icons > a:active {
     text-decoration: none;
     color: #5a5a5a;
-}
-
-#footer {
-    background: #ff5722;
-    padding: 60px 0 40px;
-}
-
-#footer p {
-    color: white;
-    font-size: 14px;
-}
-
-#footer p a {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-#footer p a:hover, #footer p a:active, #footer p a:focus {
-    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .btn {
@@ -3182,13 +3199,46 @@ color: #fff
         .navbar .menu.active {
             display: block;
         }
+
+        .footer-distributed {
+            font: bold 14px sans-serif;
+
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: block;
+            width: 100%;
+            margin-bottom: 40px;
+            text-align: center;
+            height: auto;
+        }
+
+        .footer-distributed .footer-center i {
+            margin-left: 0;
+        }
+
+        .main {
+            line-height: normal;
+            font-size: auto;
+        }
+
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 1.5em 'Roboto Light', 'sans-serif';
+            margin: 0;
+        }
+
+        .footer-distributed h3 span {
+            color: khaki;
+        }
     }
-}
 
-/******* Gallery ********/
-.image-thumbnail {
-    height: 200px;
+    /******* Gallery ********/
+    .image-thumbnail {
+        height: 200px;
 
-}
+    }
 
 
