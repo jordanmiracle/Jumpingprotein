@@ -142,7 +142,13 @@ a:active {
 
 
 /* Info Card */
+.values-column {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    display: block;
 
+}
 
 /*********************************************************************************/
 /* Image Style                                                                   */
