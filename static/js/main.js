@@ -197,7 +197,7 @@ function toggleState3() {
 let imgObject = [
     "static/webapp/images/best-insects-in-bowl-carousel.webp",
     "static/webapp/images/older-gentleman-buckets.jpg",
-    "static/webapp/images/women-working.webp",
+    "static/webapp/images/women-working-carousel.webp",
 ];
 
 let mainImg = 0;
