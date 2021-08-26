@@ -107,7 +107,7 @@ DATABASES = {
         'NAME': 'jpblogdb',
         'HOST': 'localhost',
         'PASSWORD': get_secret('DB_PASSWORD'),
-        'PORT': '',
+        'PORT': '5432',
     },
 }
 
