@@ -10,8 +10,8 @@ from django.http import HttpResponseRedirect
 
 
 def post_list(request):
-    object_list = Post.published.all()
-    paginator = Paginator(object_list, 2)
+    posts = Post.published.all()
+    paginator = Paginator(posts, 2)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -19,9 +19,9 @@ def post_list(request):
         posts = paginator.page(1)
     except EmptyPage:  # If page is out of range deliver the last page of results
         posts = page.page(page.num_pages)
-    return render(request, 'blog/post_list.html',
-                  {'page': page,
-                   'posts': posts})
+    return render(request,
+                  'blog/post_list.html',
+                  {'posts': posts})
 
 
 def post_detail(request, year, month, day, post):
