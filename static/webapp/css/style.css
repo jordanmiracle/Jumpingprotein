@@ -529,7 +529,7 @@ ul.contact li a.icon-rss:before {
 }
 
 #banner .title h2 {
-    font-size: 4em;
+    font-size: 1.5em;
     color: khaki;
     margin-top: revert;
 }
@@ -889,7 +889,8 @@ figure {
 }
 
 .about .right img {
-    width: 90%
+    width: 100%;
+    height: auto;
 }
 
 .about .left h1 {
@@ -911,7 +912,7 @@ figure {
 }
 
 .mission {
-    padding: 5% 0;
+    padding: 0% 0;
     width: 100%;
     height: auto;
     background-color: #fff;
@@ -1317,7 +1318,7 @@ html {
     background: #f5f7f8;
     font-family: system-ui;
     -webkit-font-smoothing: antialiased;
-    padding: 20px 0;
+    padding: 0px 0;
 }
 
 header {
@@ -3436,11 +3437,11 @@ color: #fff
     }
 
     #banner .title h2 {
-        font-size: 4rem;
+        font-size: 2rem;
     }
 
     #banner .title .byline {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #banner .button {
