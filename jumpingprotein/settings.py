@@ -43,7 +43,7 @@ def get_secret(setting, secrets=secrets):
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://jumping-protein.herokuapp.com/', 'www.gcet.co.zw']
 
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'blog',
     'ckeditor',
     'photos.apps.PhotosConfig',
+    'fontawesome',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
