@@ -11,7 +11,7 @@ from django.http import HttpResponseRedirect
 
 def post_list(request):
     posts = Post.published.all()
-    paginator = Paginator(posts, 2)
+    paginator = Paginator(posts, 10)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)

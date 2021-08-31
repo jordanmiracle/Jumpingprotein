@@ -16,7 +16,7 @@ class Post(models.Model):
         ('draft', 'Draft'),
         ('published', 'Published'),
     )
-    blog_image = models.ImageField(null=True, blank=True, upload_to="static/blog/images/")
+    blog_image = models.ImageField(null=False, blank=False, upload_to="blog/images/")
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250,
                             unique_for_date='publish')

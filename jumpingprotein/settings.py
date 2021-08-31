@@ -83,7 +83,7 @@ ROOT_URLCONF = 'jumpingprotein.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -153,18 +153,22 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
     'blog/static/',
     'photos/static/'
 ]
 
-MEDIA_ROOT = BASE_DIR / 'static/images'
-MEDIA_URL = '/media/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 STATICFILES = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',
+    'blog/static'
+
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 ## Heroku
