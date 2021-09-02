@@ -53,10 +53,12 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'webapp',
-    'blog',
     'ckeditor',
     'photos.apps.PhotosConfig',
-    'fontawesome',
+    'article',
+    'user',
+    'crispy_forms',
+    'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,7 +85,7 @@ ROOT_URLCONF = 'jumpingprotein.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -154,8 +156,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    'blog/static/',
-    'photos/static/'
+    'article/static/',
+    'photos/static/',
+    'user/static'
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
@@ -165,6 +168,18 @@ STATICFILES = [
     BASE_DIR / 'static'
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "removePlugins": "stylesheetparser",
+        "allowedContent" : True,
+        "width" : "100%",
+    }
+}
+
 
 
 ## Heroku

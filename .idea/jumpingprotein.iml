@@ -33,8 +33,7 @@
       <list>
         <option value="$MODULE_DIR$/.env/lib/python3.8/site-packages/django/forms/templates" />
         <option value="$MODULE_DIR$/webapp/templates" />
-        <option value="$MODULE_DIR$/blog/templates" />
-        <option value="$MODULE_DIR$/members/templates" />
+        <option value="$MODULE_DIR$/templates" />
       </list>
     </option>
   </component>
