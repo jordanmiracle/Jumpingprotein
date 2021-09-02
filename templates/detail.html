@@ -54,24 +54,26 @@
       
       {% else %}
       <div class ="alert alert-danger">
-        Bu makaleye herhangi bir yorum yazılmamış,ilk yorum yapan siz olun!
+        No comments yet.
       </div>
       {% endif %}
 
       <div class="card my-4 container">
-          <h5 class="card-header">Yorum Ekle:</h5>
+          <h5 class="card-header">Add comment</h5>
           <div class="card-body">
             <form method = "post" action = "{% url 'article:comment' article.slug %}">
               {% csrf_token %}
               <div class="form-group">
-                  <label for="formGroupExampleInput">İsim</label>
-                  <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="İsminizi girin">
+                  <label for="formGroupExampleInput">Name</label>
+                  <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
                 </div>
               <div class="form-group">
-                  <label for="formGroupExampleInput">Yorum</label>
-                <textarea name = "comment_content" class="form-control" rows="3"></textarea>
+                  <label for="formGroupExampleInput">Comment</label>
+                  <label>
+                      <textarea name = "comment_content" class="form-control" rows="3"></textarea>
+                  </label>
               </div>
-              <button type="submit" class="btn btn-danger my-3">Ekle</button>
+              <button type="submit" class="btn btn-danger my-3">Add</button>
             </form>
           </div>
         </div>
