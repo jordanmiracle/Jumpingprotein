@@ -6,9 +6,9 @@ from .forms import RegisterForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
+from django.urls import reverse_lazy
+from django.contrib.auth.decorators import user_passes_test
 
-
-# Create your views here.
 
 def register(request):
     form = RegisterForm(request.POST or None)
@@ -44,10 +44,10 @@ def loginUser(request):
         user = authenticate(username=username, password=password)
 
         if user is None:
-            messages.info(request, "Kullanıcı Adı veya Parola Hatalı")
+            messages.info(request, "Username or password incorrect")
             return render(request, "login.html", context)
 
-        messages.success(request, "Başarıyla Giriş Yaptınız")
+        messages.success(request, "Login Successful")
         login(request, user)
         return redirect("index")
     return render(request, "login.html", context)
@@ -55,6 +55,6 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    messages.success(request, "Başarıyla Çıkış Yaptınız")
+    messages.success(request, "Logout Successful")
     return redirect("index")
 

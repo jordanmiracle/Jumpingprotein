@@ -45,7 +45,7 @@ def addArticle(request):
         article.author = request.user
         article.save()
 
-        messages.success(request, "Makale başarıyla oluşturuldu")
+        messages.success(request, "Blog post was uploaded!")
         return redirect("article:dashboard")
     return render(request, "addarticle.html", {"form": form})
 
@@ -67,7 +67,7 @@ def updateArticle(request, slug):
         article.author = request.user
         article.save()
 
-        messages.success(request, "Makale başarıyla güncellendi")
+        messages.success(request, "Blog post was updated!")
         return redirect("article:dashboard")
 
     return render(request, "update.html", {"form": form})
@@ -79,7 +79,7 @@ def deleteArticle(request, slug):
 
     article.delete()
 
-    messages.success(request, "Makale Başarıyla Silindi")
+    messages.success(request, "Blog post deleted")
 
     return redirect("article:dashboard")
 

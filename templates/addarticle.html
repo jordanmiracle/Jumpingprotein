@@ -10,15 +10,13 @@
             <hr>
             <form method="post" enctype="multipart/form-data">
                 {% if user.is_authenticated %}
-                    {% if user.id == article.author.id %}
-                        {% csrf_token %}
-                        {{ form.media }}
-                        {{ form|crispy }}
-                        <br>
-                        <button type="submit" class="btn btn-danger">Add Post</button>
-                        </form>
-                        </div>
-                        </div>
-                    {% endif %}
+                    {% csrf_token %}
+                    {{ form.media }}
+                    {{ form|crispy }}
+                    <br>
+                    <button type="submit" class="btn btn-danger">Add Post</button>
+                    </form>
+                    </div>
+                    </div>
                 {% endif %}
 {% endblock body %}
