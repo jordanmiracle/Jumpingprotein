@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import user_passes_test
+from .forms import RegisterForm, LoginForm
 
 
 def register(request):

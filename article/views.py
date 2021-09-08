@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.template.defaultfilters import slugify
 from django.db.models import Count
 from django.contrib.auth.decorators import login_required
+from django.views.generic import DetailView
 
 
 def articles(request):

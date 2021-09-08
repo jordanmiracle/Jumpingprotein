@@ -11,6 +11,7 @@ CHOICE_LIST = [
 ]
 
 
+
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article

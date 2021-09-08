@@ -12,7 +12,7 @@
       <!-- Author -->
       <p class="lead">
         
-        {{article.author.username}} tarafından yayınlandı
+        By {{article.author.username}}
       </p>
 
       <hr>
@@ -37,7 +37,7 @@
 
       <hr>
 
-      <h4>Yorumlar {% if comments %}({{comments.count }}){% endif %}</h4>
+      <h4>Comments {% if comments %}({{comments.count }}){% endif %}</h4>
       <hr>
       {% if comments %}
       {% for comment in comments  %}
