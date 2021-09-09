@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class ="row">
-    
+
         <div class="col-md-10 offset-md-3">
             <div class="col-lg-8">
                 <h3>Blog Posts</h3>
@@ -15,7 +15,7 @@
     <div class="col-md-10 offset-md-3">
         <div class="col-lg-8">
             <form>
-                 {% csrf_token %} 
+                 {% csrf_token %}
                 <input type="text" name = "keyword" class="input-sm" maxlength="64" placeholder="Search">
               <button type="submit" class="btn btn-danger">Search</button>
             </form>
@@ -35,11 +35,11 @@
     <div class="col-lg-8">
 
       <!-- Title -->
-      <a href="{% url 'article:detail' article.slug %}"><h2 class="mt-4">{{article.title}}</h2></a> 
-        
+      <a href="{% url 'article:detail' article.slug %}"><h2 class="mt-4">{{article.title}}</h2></a>
+
       <!-- Author -->
       <p class="lead">
-        
+
         Posted by {{article.author.username}}
       </p>
 
@@ -52,7 +52,7 @@
       {% if article.article_image %}
       <a href="{% url 'article:detail' article.slug %}"><img class="img-fluid rounded" src="{{article.article_image.url}}" alt=""></a>
       {% endif %}
-     
+
 
       <hr>
 
@@ -63,7 +63,7 @@
 
       <a href="{% url 'article:detail' article.slug %}" class ="btn btn-danger my-3">Read More</a>
       <hr>
-         
+
         </div>
       </div>
       </div>
@@ -73,7 +73,7 @@
 
 {% else %}
 <div class ="row">
-    
+
     <div class="col-md-10 offset-md-3">
         <div class="col-lg-8">
 <div class = "alert alert-danger">

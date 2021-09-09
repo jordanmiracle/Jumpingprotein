@@ -53,6 +53,7 @@ body.fh5co-offcanvas {
 }
 
 .row {
+    display: flex;
     margin-left: -15px;
     margin-right: -15px;
 }
