@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'user',
     'storages',
     'crispy_forms',
+    'pwa',
     'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -189,7 +190,6 @@ if not DEBUG:
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'dashboard'
 
-
 import boto3
 import base64
 from botocore.exceptions import ClientError
@@ -244,14 +244,13 @@ def get_secret():
             decoded_binary_secret = base64.b64decode(get_secret_value_response['SecretBinary'])
 
 
-
 AWS_STORAGE_BUCKET_NAME = 'gcet-bucket'
 AWS_S3_FILE_OVERWRITE = False
-#AWS_DEFAULT_ACL = 'public-read'
+# AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
- }
+}
 AWS_MEDIA_LOCATION = 'media'
 AWS_PUBLIC_LOCATION = 'public'
 PRIVATE_FILE_STORAGE = 'jumpingprotein.storage_backends.MediaStorage'
@@ -263,24 +262,21 @@ STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 
-
-
-
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 # STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 # )
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#STATICFILES_DIRS = [
+# STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, 'static'),
 # ]
 
 PWA_APP_NAME = 'Jumping Protein: A Division of GCET'
-PWA_APP_DESCRIPTION = "Family owned tree and landscaping service that serves Whatcom, Skagit, and Island counties. " \
-                      "Safety, speed, and efficiency set us apart. We offer 24/7 emergency services, along with a " \
-                      "wide array of other tree and land services. "
+PWA_APP_DESCRIPTION = "A trust that works at empowering rural communities though entrepreneurship and agriculture. " \
+                      "Our focus is on the African continent, and we work to empower communities through education " \
+                      "while working toward sustainable nutrition for all."
 PWA_APP_THEME_COLOR = '#2a4027'
 PWA_APP_BACKGROUND_COLOR = '#CED2D9'
 PWA_APP_DISPLAY = 'standalone'
@@ -314,5 +310,3 @@ PWA_APP_LANG = 'en-US'
 if not DEBUG:
     django_heroku.settings(locals(), staticfiles=False)
     DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
-
-
