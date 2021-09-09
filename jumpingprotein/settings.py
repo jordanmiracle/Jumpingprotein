@@ -43,7 +43,7 @@ def get_secret(setting, secrets=secrets):
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gcet.africa', 'www.gcet.africa']
 
