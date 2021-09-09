@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*9s9dl#1fnc9s7&78w73%l#ri^7lyr$%k*&m3jdyq1m!7x9#mt'
+SECRET_KEY = os.getenv('SECRET_KEY', 'Optional default value')
 
 import json
 import os
@@ -111,7 +111,7 @@ if DEBUG:
             'USER': 'jordanmiracle',
             'NAME': 'jpblogdb',
             'HOST': 'localhost',
-            'PASSWORD': get_secret('DB_PASSWORD'),
+            'PASSWORD': os.getenv('db_password'),
             'PORT': '5432',
         },
     }
@@ -155,21 +155,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    'article/static/',
-    'photos/static/',
-    'user/static'
-]
-
-MEDIA_ROOT = BASE_DIR / 'static/images'
-MEDIA_URL = '/media/images/'
-
-STATICFILES = [
-    BASE_DIR / 'static'
-]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [
+#    BASE_DIR / "static",
+#    'article/static/',
+#    'photos/static/',
+#    'user/static'
+#]
+#
+#MEDIA_ROOT = BASE_DIR / 'static/images'
+#MEDIA_URL = '/media/images/'
+#
+#STATICFILES = [
+#    BASE_DIR / 'static'
+#]
+#STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -181,12 +181,6 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-## Heroku
-# heroku database settings
-if not DEBUG:
-    django_heroku.settings(locals(), staticfiles=False)
-    DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
-
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'dashboard'
 
@@ -196,7 +190,7 @@ from botocore.exceptions import ClientError
 
 
 def get_secret():
-    secret_name = "gcetbucket"
+    secret_name = "gcet-bucket"
     region_name = "us-west-2"
 
     # Create a Secrets Manager client
