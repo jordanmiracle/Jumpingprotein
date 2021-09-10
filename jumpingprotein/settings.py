@@ -238,9 +238,10 @@ def get_secret():
             decoded_binary_secret = base64.b64decode(get_secret_value_response['SecretBinary'])
 
 
+
+#### AWS Settings ####
 AWS_STORAGE_BUCKET_NAME = 'gcet-bucket'
 AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
@@ -255,6 +256,13 @@ STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+
+##############################################
+
+
+
+
+# AWS_DEFAULT_ACL = 'public-read'
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
