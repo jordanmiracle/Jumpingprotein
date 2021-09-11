@@ -3457,7 +3457,8 @@ color: #fff
     }
 
     #banner .title .byline {
-        font-size: 1.1rem;
+        font-size: .5rem;
+        color: darkgrey;
     }
 
     #banner .button {
