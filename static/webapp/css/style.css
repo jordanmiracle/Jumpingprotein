@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -148,7 +148,8 @@ a:active {
     margin-right: auto;
     width: 30em;
     display: block;
-    font-size: 1.5rem; !important;
+    font-size: 1.5rem;
+!important;
 }
 
 .values-column .h2 {
@@ -2063,6 +2064,21 @@ header {
         width: 80%;
     }
 
+    .values-column {
+        margin-left: auto;
+        margin-right: auto;
+        width: 30em;
+        display: block;
+        font-size: 1.5rem;
+    !important;
+    }
+
+    .values-column .h2 {
+        font-size: 1em;
+
+
+    }
+
 }
 
 .feature-left .feature-copy h3 {
@@ -2080,6 +2096,7 @@ header {
     padding: 7em 0;
     min-height: 500px;
 }
+
 
 @media screen and (max-width: 768px) {
     #fh5co-portfolio {
@@ -2857,7 +2874,7 @@ color: #fff
         margin-top: 2em;
     }
 
-    .h2{
+    .h2 {
         font-size: 1.5em;
     }
 }
@@ -3422,8 +3439,6 @@ color: #fff
 }
 
 
-
-
 /* Devices smaller than 800px but larger than 480px */
 @media only screen and ( min-width: 600px ) and ( max-width: 800px), (orientation: portrait) {
     #header-wrapper {
@@ -3453,11 +3468,11 @@ color: #fff
     }
 
     #banner .title h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #banner .title .byline {
-        font-size: .5rem;
+        font-size: 1rem;
         color: darkgrey;
     }
 

@@ -1,3 +1,4 @@
+{% load cache %}
 {% load pwa %}
 {% load static %}
 <!DOCTYPE HTML>
@@ -13,10 +14,11 @@
           content="Sustainability, farming, protein, hunger, climate, poverty, economy, business, education, empowerment, Basic needs, Development">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+    <meta name="language" content=serviceworker"English">
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="Esnath Divasoni">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="/manifest.json">
+    {% progressive_web_app_meta %}
     <link rel="stylesheet" href="{% static "webapp/css/style.css" %}">
 
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
