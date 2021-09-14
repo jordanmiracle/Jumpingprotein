@@ -339,8 +339,8 @@ def get_cache():
                 'LOCATION': servers,
                 'OPTIONS': {
                     'binary': True,
-                    'username': 'yhlngqlklkagzw',
-                    'password': '4a64b558a46340e20688a203282507106c642019bb007cfbc1927becd253aa5c',
+                    'username': username,
+                    'password': password,
                     'behaviors': {
                         # Enable faster IO
                         'no_block': True,
