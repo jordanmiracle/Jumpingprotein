@@ -52,7 +52,6 @@ if not DEBUG:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
 
-
 # Application definition
 
 SITE_ID = 1
@@ -108,8 +107,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 
- #Database
- #https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+# Database
+# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 if DEBUG:
     DATABASES = {
         'default': {
@@ -260,13 +259,13 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 PUBLIC_MEDIA_LOCATION = 'media'
-MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME # This was changed after we got everything up and running again
-MEDIA_ROOT = MEDIA_URL # As was this
+MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME  # This was changed after we got everything up and running again
+MEDIA_ROOT = MEDIA_URL  # As was this
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),      #  And this
+    os.path.join(BASE_DIR, 'static'),  # And this
 ]
 ##############################################
 
@@ -320,3 +319,54 @@ PWA_APP_LANG = 'en-US'
 if not DEBUG:
     django_heroku.settings(locals(), staticfiles=False)
     DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
+
+
+########### Memcache ##############
+
+def get_cache():
+    import os
+    try:
+        servers = os.environ['MEMCACHIER_SERVERS']
+        username = os.environ['MEMCACHIER_USERNAME']
+        password = os.environ['MEMCACHIER_PASSWORD']
+        return {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+                # TIMEOUT is not the connection timeout! It's the default expiration
+                # timeout that should be applied to keys! Setting it to `None`
+                # disables expiration.
+                'TIMEOUT': None,
+                'LOCATION': servers,
+                'OPTIONS': {
+                    'binary': True,
+                    'username': 'yhlngqlklkagzw',
+                    'password': '4a64b558a46340e20688a203282507106c642019bb007cfbc1927becd253aa5c',
+                    'behaviors': {
+                        # Enable faster IO
+                        'no_block': True,
+                        'tcp_nodelay': True,
+                        # Keep connection alive
+                        'tcp_keepalive': True,
+                        # Timeout settings
+                        'connect_timeout': 2000,  # ms
+                        'send_timeout': 750 * 1000,  # us
+                        'receive_timeout': 750 * 1000,  # us
+                        '_poll_timeout': 2000,  # ms
+                        # Better failover
+                        'ketama': True,
+                        'remove_failed': 1,
+                        'retry_timeout': 2,
+                        'dead_timeout': 30,
+                    }
+                }
+            }
+        }
+    except:
+        return {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'
+            }
+        }
+
+
+CACHES = get_cache()
