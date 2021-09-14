@@ -108,19 +108,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-#if DEBUG:
-#    DATABASES = {
-#        'default': {
-#            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#            'USER': 'jordanmiracle',
-#            'NAME': 'jpblogdb',
-#            'HOST': 'localhost',
-#            'PASSWORD': os.getenv('DB_PASSWORD'),
-#            'PORT': '5432',
-#        },
-#    }
+ #Database
+ #https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'USER': 'jordanmiracle',
+            'NAME': 'jpblogdb',
+            'HOST': 'localhost',
+            'PASSWORD': os.getenv('DB_PASSWORD'),
+            'PORT': '5432',
+        },
+    }
 
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, "fixtures")
@@ -197,7 +197,7 @@ from botocore.exceptions import ClientError
 
 def get_secret():
     secret_name = "gcet-bucket"
-    region_name = "us-west-2"
+    region_name = "eu-west-3"
 
     # Create a Secrets Manager client
     session = boto3.session.Session()
