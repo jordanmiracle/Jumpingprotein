@@ -22,7 +22,7 @@ def register(request):
 
         newUser.save()
         login(request, newUser)
-        messages.info(request, "Başarıyla Kayıt Oldunuz...")
+        messages.info(request, "Successfully registered..")
 
         return redirect("index")
     context = {

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import handler400, handler500
 from . import views
 
@@ -13,5 +13,6 @@ urlpatterns = [
     path('delete/<slug:slug>', views.deleteArticle, name="delete"),
     path('', views.articles, name="articles"),
     path('comment/<slug:slug>', views.addComment, name="comment"),
+    path('', include('pwa.urls'))
 
 ]
