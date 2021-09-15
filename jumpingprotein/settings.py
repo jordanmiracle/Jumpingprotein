@@ -316,7 +316,7 @@ PWA_APP_LANG = 'en-US'
 PWA_APP_DEBUG_MODE = False
 
 
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'webapp', 'serviceworker.js')
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'jumpingprotein', 'serviceworker.js')
 
 
 
