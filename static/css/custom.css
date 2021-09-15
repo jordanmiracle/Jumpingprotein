@@ -10,3 +10,15 @@
 a {
     color: #ffffff;
 }
+
+a:hover a:focus{
+    color: khaki;
+}
+
+.nav-link:hover{
+    color: khaki;
+}
+
+.navbar-brand:hover{
+    color: khaki;
+}

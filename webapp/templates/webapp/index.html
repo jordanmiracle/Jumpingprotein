@@ -50,6 +50,9 @@
     <link href="default_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
 
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+</style>
 
 <body>
 <div id="header-wrapper">
@@ -59,11 +62,11 @@
         <div class="navbar">
             <div class="inner_navbar">
                 <div class="logo">
-                    <a class="current" href="{% url 'about' %}"><span>GCET</span></a>
+                    <a href="{% url 'about' %}"><span>GCET</span></a>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                        <li><a class="current" href="{% url 'index' %}">Home</a></li>
                         <li><a href="{% url 'about' %}">About Us</a></li>
                         <li><a href="{% url 'article:articles' %}">Blog</a></li>
                         <li><a href="{% url 'gallery' %}">Gallery</a></li>
@@ -167,78 +170,63 @@
                 </div>
             </div>
         </div>
-        <div class="flex">
-            <div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
-
-                    <h2>Organizational Values</h2>
-
-                    <ul>
-                        <li>• Divine intervention for positive transformation.</li>
-                        <li>• Empowerment through education.</li>
-                        <li>• Timely response to human need and response to disaster.</li>
-                        <li>• Respect to gender, disability, creed, race and any form of cultural diversity.</li>
-                        <li>• Transparent and competent human contribution</li>
-                        <li>• Teamwork, approachability, accessibility and dependability.</li>
-                        <li>• High business integrity, trust truth and love.</li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-        <div class="row row-bottom-padded-md">
-            <div class="col-md-12">
-                <ul id="fh5co-portfolio-list">
-
-                    <li class="two-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url({% static 'webapp/images/masked-group-sitting.webp' %}); ">
-                        <a href="#" class="color-3">
-                            <div class="case-studies-summary">
-                                <span>Fight</span>
-                                <h2>Food shortages</h2>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="one-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url({% static 'webapp/images/best-insects-in-bowl.webp' %}); ">
-                        <a href="#" class="color-4">
-                            <div class="case-studies-summary">
-                                <span>Highly</span>
-                                <h2>Nutritious</h2>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="one-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url({% static 'webapp/images/insect-protein.webp' %}); ">
-                        <a href="#" class="color-5">
-                            <div class="case-studies-summary">
-                                <span>Lower</span>
-                                <h2>Water Consumption</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="two-third animate-box" data-animate-effect="fadeIn"
-                        style="background-image: url({% static 'webapp/images/children-esnath-bin.webp' %}); ">
-                        <a href="#" class="color-6">
-                            <div class="case-studies-summary">
-                                <span>Demands</span>
-                                <h2>Less Labor</h2>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center animate-box">
-                <a href="#" class="btn btn-primary btn-lg">See Gallery</a>
-            </div>
-        </div>
-
 
     </div>
+</div>
+<div class="row row-bottom-padded-md">
+    <div class="col-md-12">
+        <ul id="fh5co-portfolio-list">
+
+            <li class="two-third animate-box" data-animate-effect="fadeIn"
+                style="background-image: url({% static 'webapp/images/masked-group-sitting.webp' %}); ">
+                <a href="#" class="color-3">
+                    <div class="case-studies-summary">
+                        <span>Fight</span>
+                        <h2>Food shortages</h2>
+                    </div>
+                </a>
+            </li>
+
+            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                style="background-image: url({% static 'webapp/images/best-insects-in-bowl.webp' %}); ">
+                <a href="#" class="color-4">
+                    <div class="case-studies-summary">
+                        <span>Highly</span>
+                        <h2>Nutritious</h2>
+                    </div>
+                </a>
+            </li>
+
+            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                style="background-image: url({% static 'webapp/images/insect-protein.webp' %}); ">
+                <a href="#" class="color-5">
+                    <div class="case-studies-summary">
+                        <span>Lower</span>
+                        <h2>Water Consumption</h2>
+                    </div>
+                </a>
+            </li>
+            <li class="two-third animate-box" data-animate-effect="fadeIn"
+                style="background-image: url({% static 'webapp/images/children-esnath-bin.webp' %}); ">
+                <a href="#" class="color-6">
+                    <div class="case-studies-summary">
+                        <span>Demands</span>
+                        <h2>Less Labor</h2>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 text-center animate-box">
+        <a href="#" class="btn btn-primary btn-lg">See Gallery</a>
+    </div>
+</div>
+
+
+</div>
 </div>
 
 
