@@ -51,6 +51,7 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 60
 
 # Application definition
 
@@ -314,10 +315,6 @@ PWA_APP_SPLASH_SCREEN = [
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 PWA_APP_DEBUG_MODE = False
-
-
-#PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'jumpingprotein', 'serviceworker.js')
-
 
 
 ## Heroku
