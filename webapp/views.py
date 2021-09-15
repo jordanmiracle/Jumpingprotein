@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.http import HttpResponse
 from django.shortcuts import render
 from compression_middleware.decorators import compress_page
 
@@ -12,3 +14,5 @@ def about(request):
     return render(request, 'webapp/about.html', {})
 
 
+def sw(request):
+    return HttpResponse(settings.SERVICE_WORKER)
