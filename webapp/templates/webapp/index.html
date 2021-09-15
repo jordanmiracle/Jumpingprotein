@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="{% static "webapp/css/style.css" %}">
 
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
     <link rel="stylesheet" href="{% static 'webapp/css/animate.css' %}">
     <!-- Icomoon Icon Fonts-->
@@ -58,7 +59,7 @@
         <div class="navbar">
             <div class="inner_navbar">
                 <div class="logo">
-                    <a href="{% url 'about' %}"><span>GCET</span></a>
+                    <a class="current" href="{% url 'about' %}"><span>GCET</span></a>
                 </div>
                 <div class="menu">
                     <ul>
@@ -70,7 +71,9 @@
                 </div>
             </div>
             <div class="hamburger">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars">
+
+                </i>
             </div>
         </div>
     </div>
@@ -165,19 +168,21 @@
             </div>
         </div>
         <div class="flex">
-            <div class="values-column">
-                <h2>Organizational Values</h2>
+            <div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
 
-                <ul>
-                    <li>• Divine intervention for positive transformation.</li>
-                    <li>• Empowerment through education.</li>
-                    <li>• Timely response to human need and response to disaster.</li>
-                    <li>• Respect to gender, disability, creed, race and any form of cultural diversity.</li>
-                    <li>• Transparent and competent human contribution</li>
-                    <li>• Teamwork, approachability, accessibility and dependability.</li>
-                    <li>• High business integrity, trust truth and love.</li>
-                </ul>
+                    <h2>Organizational Values</h2>
 
+                    <ul>
+                        <li>• Divine intervention for positive transformation.</li>
+                        <li>• Empowerment through education.</li>
+                        <li>• Timely response to human need and response to disaster.</li>
+                        <li>• Respect to gender, disability, creed, race and any form of cultural diversity.</li>
+                        <li>• Transparent and competent human contribution</li>
+                        <li>• Teamwork, approachability, accessibility and dependability.</li>
+                        <li>• High business integrity, trust truth and love.</li>
+                    </ul>
+
+                </div>
             </div>
         </div>
         <div class="row row-bottom-padded-md">
