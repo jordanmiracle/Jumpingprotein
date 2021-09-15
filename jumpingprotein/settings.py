@@ -315,6 +315,10 @@ PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 PWA_APP_DEBUG_MODE = False
 
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'jumpingprotein', 'serviceworker.js')
+
+
+
 ## Heroku
 # heroku database settings
 if not DEBUG:
@@ -371,3 +375,5 @@ def get_cache():
 
 
 CACHES = get_cache()
+
+
