@@ -190,7 +190,7 @@ USE_TZ = True
 # STATICFILES = [
 #    BASE_DIR / 'static'
 # ]
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -202,7 +202,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-COMPRESS_ROOT = 'tmp/static'
+COMPRESS_ROOT = STATIC_ROOT
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'dashboard'
