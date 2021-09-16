@@ -43,15 +43,9 @@ def get_secret(setting, secrets=secrets):
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gcet.africa', 'www.gcet.africa']
-
-if not DEBUG:
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_HSTS_SECONDS = 60
 
 # Application definition
 
@@ -66,7 +60,6 @@ INSTALLED_APPS = [
     'storages',
     'crispy_forms',
     'pwa',
-    'compressor',
     'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -79,8 +72,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.gzip.GZipMiddleware',
-    'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,7 +111,7 @@ if DEBUG:
             'USER': 'jordanmiracle',
             'NAME': 'jpblogdb',
             'HOST': 'localhost',
-            'PASSWORD': os.getenv('DB_PASSWORD'),
+            'PASSWORD': 'Likeacarrot23!',
             'PORT': '5432',
         },
     }
@@ -147,19 +138,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-## django-compressor settings, for speeding up page load times by minifying CSS and JavaScript files.
-# Documentation: https://django-compressor.readthedocs.io/en/latest/
-COMPRESS_OUTPUT_DIR = 'cache'
-COMPRESS_CSS_FILTERS = [
-    'compressor.filters.css_default.CssAbsoluteFilter',
-    'compressor.filters.cssmin.CSSMinFilter',
-]
-COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
-COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
-
-#STATIC_ROOT = 'static'
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -177,20 +155,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#    BASE_DIR / "static",
-#    'article/static/',
-#    'photos/static/',
-#    'user/static'
-# ]
-#
-# MEDIA_ROOT = BASE_DIR / 'static/images'
-# MEDIA_URL = '/media/images/'
-#
-# STATICFILES = [
-#    BASE_DIR / 'static'
-# ]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    'article/static/',
+    'photos/static/',
+    'user/static'
+]
+
+MEDIA_ROOT = BASE_DIR / 'static/images'
+MEDIA_URL = '/media/images/'
+
+STATICFILES = [
+    BASE_DIR / 'static'
+]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -202,8 +180,6 @@ CKEDITOR_CONFIGS = {
         "width": "100%",
     }
 }
-
-COMPRESS_ROOT = STATIC_ROOT
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'dashboard'
@@ -263,29 +239,24 @@ def get_secret():
 
 
 ##### AWS Settings ####
-AWS_STORAGE_BUCKET_NAME = 'gcet-bucket'
-AWS_S3_FILE_OVERWRITE = False
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',
-}
-AWS_MEDIA_LOCATION = 'media'
-AWS_PUBLIC_LOCATION = 'public'
-PRIVATE_FILE_STORAGE = 'jumpingprotein.storage_backends.MediaStorage'
-AWS_S3_REGION_NAME = 'eu-west-3'
-AWS_LOCATION = 'static'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# AWS_STORAGE_BUCKET_NAME = 'gcet-bucket'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# AWS_S3_OBJECT_PARAMETERS = {
+#    'CacheControl': 'max-age=86400',
+# }
+# AWS_MEDIA_LOCATION = 'media'
+# AWS_PUBLIC_LOCATION = 'public'
+# PRIVATE_FILE_STORAGE = 'jumpingprotein.storage_backends.MediaStorage'
+# AWS_S3_REGION_NAME = 'eu-west-3'
+# AWS_LOCATION = 'static'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+#
+# PUBLIC_MEDIA_LOCATION = 'media'
+# MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-PUBLIC_MEDIA_LOCATION = 'media'
-MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME  # This was changed after we got everything up and running again
-MEDIA_ROOT = MEDIA_URL  # As was this
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # And this
-]
 ##############################################
 
 
@@ -332,21 +303,9 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
-PWA_APP_DEBUG_MODE = False
-
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-)
 
 ## Heroku
 # heroku database settings
 if not DEBUG:
     django_heroku.settings(locals(), staticfiles=False)
     DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
-
-
-########### Memcache ##############
-
