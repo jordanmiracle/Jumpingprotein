@@ -66,7 +66,6 @@ INSTALLED_APPS = [
     'storages',
     'crispy_forms',
     'pwa',
-    'compressor',
     'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
