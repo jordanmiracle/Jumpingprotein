@@ -79,8 +79,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.gzip.GZipMiddleware',
-    'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -147,19 +145,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-## django-compressor settings, for speeding up page load times by minifying CSS and JavaScript files.
-# Documentation: https://django-compressor.readthedocs.io/en/latest/
-COMPRESS_OUTPUT_DIR = 'cache'
-COMPRESS_CSS_FILTERS = [
-    'compressor.filters.css_default.CssAbsoluteFilter',
-    'compressor.filters.cssmin.CSSMinFilter',
-]
-COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
-COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
-
-#STATIC_ROOT = 'static'
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -191,7 +176,7 @@ USE_TZ = True
 # STATICFILES = [
 #    BASE_DIR / 'static'
 # ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -202,8 +187,6 @@ CKEDITOR_CONFIGS = {
         "width": "100%",
     }
 }
-
-COMPRESS_ROOT = STATIC_ROOT
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'dashboard'
@@ -349,4 +332,53 @@ if not DEBUG:
 
 
 ########### Memcache ##############
+
+def get_cache():
+    import os
+    try:
+        servers = os.environ['MEMCACHIER_SERVERS']
+        username = os.environ['MEMCACHIER_USERNAME']
+        password = os.environ['MEMCACHIER_PASSWORD']
+        return {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+                # TIMEOUT is not the connection timeout! It's the default expiration
+                # timeout that should be applied to keys! Setting it to `None`
+                # disables expiration.
+                'TIMEOUT': None,
+                'LOCATION': servers,
+                'OPTIONS': {
+                    'binary': True,
+                    'username': username,
+                    'password': password,
+                    'behaviors': {
+                        # Enable faster IO
+                        'no_block': True,
+                        'tcp_nodelay': True,
+                        # Keep connection alive
+                        'tcp_keepalive': True,
+                        # Timeout settings
+                        'connect_timeout': 2000,  # ms
+                        'send_timeout': 750 * 1000,  # us
+                        'receive_timeout': 750 * 1000,  # us
+                        '_poll_timeout': 2000,  # ms
+                        # Better failover
+                        'ketama': True,
+                        'remove_failed': 1,
+                        'retry_timeout': 2,
+                        'dead_timeout': 30,
+                    }
+                }
+            }
+        }
+    except:
+        return {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'
+            }
+        }
+
+
+CACHES = get_cache()
+
 
