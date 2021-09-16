@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'storages',
     'crispy_forms',
     'pwa',
+    'compressor',
     'django_cleanup',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -316,6 +317,12 @@ PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 PWA_APP_DEBUG_MODE = False
 
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
 ## Heroku
 # heroku database settings
