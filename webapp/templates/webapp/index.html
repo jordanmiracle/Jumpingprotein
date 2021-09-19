@@ -1,3 +1,4 @@
+{% load compress %}
 {% load cache %}
 {% load pwa %}
 {% load static %}
@@ -5,6 +6,8 @@
 <html lang="en">
 
 <head>
+
+{% compress js/css %}
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -19,9 +22,7 @@
     <meta name="language" content=serviceworker"English">
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="Esnath Divasoni">
-    {% progressive_web_app_meta %}
-
-    <link rel="manifest" href="{% static 'manifest.json' %}">
+    <link rel="stylesheet" href="{% static 'icomoon/icomoon.css' %}"/>
     <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="{% static 'webapp/css/style.css' %}"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -34,6 +35,7 @@
     <link rel="stylesheet" href="{% static 'webapp/css/superfish.css' %}">
 
     <link href="{% static "webapp/css/fonts.css" %}" rel="stylesheet" type="text/css" media="all"/>
+    {% endcompress %}
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content=" IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
@@ -53,7 +55,7 @@
 </head>
 
 
-<body>
+<body class="landing is-preload">
 <div id="header-wrapper">
     <div id="topheader" class="container">
         <div id="logo">
