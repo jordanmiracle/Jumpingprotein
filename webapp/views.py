@@ -12,7 +12,3 @@ def index(request):
 @compress_page
 def about(request):
     return render(request, 'webapp/about.html', {})
-
-
-def sw(request):
-    return HttpResponse(settings.SERVICE_WORKER)
