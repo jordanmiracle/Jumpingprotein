@@ -1,6 +1,5 @@
 /* Blue, green, brown as primary. Red, white, yellow as secondary.*/
 
-@import url("static/icomoon/icomoon.css");
 
 html {
     scroll-behavior: smooth;
@@ -433,8 +432,8 @@ ul.contact li a.icon-rss:before {
     background-position-y: center;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    border-bottom-left-radius: 10% 10%;
-    border-bottom-right-radius: 10% 10%;
+    border-bottom-left-radius: 2% 2%;
+    border-bottom-right-radius: 2% 2%;
 }
 
 #about-header-wrapper {
@@ -444,14 +443,14 @@ ul.contact li a.icon-rss:before {
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.1)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
     background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/group-sitting.webp") 50% 0 no-repeat;
-    background-size: cover;
+    background-size: 100vw;
     display: block;
     height: auto;
     width: 100%;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    border-bottom-left-radius: 10% 10%;
-    border-bottom-right-radius: 10% 10%;
+    border-bottom-left-radius: 2% 2%;
+    border-bottom-right-radius: 2% 2%;
 
 }
 
@@ -2118,7 +2117,7 @@ header {
 }
 
 #fh5co-portfolio {
-    padding: 7em 0;
+    padding: 0 0;
     min-height: 500px;
 }
 
@@ -3199,6 +3198,11 @@ color: #fff
 /*********************************************************************************/
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .header-wrapper {
+        background-size: auto 1024px ;
+    }
+
     .page-title, .page-description {
         float: left;
         width: 20em;
