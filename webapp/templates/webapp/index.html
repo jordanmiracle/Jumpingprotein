@@ -22,8 +22,7 @@
     {% progressive_web_app_meta %}
 
     <link rel="manifest" href="{% static 'manifest.json' %}">
-    <link href="{% static "webapp/css/style.css" %}">
-
+    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="{% static 'webapp/css/style.css' %}"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
