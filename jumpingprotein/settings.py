@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'pwa',
     'django_cleanup',
-    'compressor',
+#    'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -331,35 +331,35 @@ if not DEBUG:
 
 ########### Memcache / Compression ##############
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
-}
-
-COMPRESS_ENABLED = True
-COMPRESS_CSS_HASHING_METHOD = 'content'
-COMPRESS_FILTERS = {
-    'css':[
-        'compressor.filters.css_default.CssAbsoluteFilter',
-        'compressor.filters.cssmin.rCSSMinFilter',
-    ],
-    'js':[
-        'compressor.filters.jsmin.JSMinFilter',
-    ]
-}
-KEEP_COMMENTS_ON_MINIFYING = True
-
-EXCLUDE_FROM_MINIFYING = ('^articles/', '^photos' '^admin/')
-
-
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-)
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-COMPRESS_ROOT = STATIC_ROOT
+#CACHES = {
+#    'default': {
+#        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#        'LOCATION': '127.0.0.1:11211',
+#    }
+#}
+#
+#COMPRESS_ENABLED = True
+#COMPRESS_CSS_HASHING_METHOD = 'content'
+#COMPRESS_FILTERS = {
+#    'css':[
+#        'compressor.filters.css_default.CssAbsoluteFilter',
+#        'compressor.filters.cssmin.rCSSMinFilter',
+#    ],
+#    'js':[
+#        'compressor.filters.jsmin.JSMinFilter',
+#    ]
+#}
+#KEEP_COMMENTS_ON_MINIFYING = True
+#
+#EXCLUDE_FROM_MINIFYING = ('^articles/', '^photos' '^admin/')
+#
+#
+#
+#STATICFILES_FINDERS = (
+#    'django.contrib.staticfiles.finders.FileSystemFinder',
+#    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'compressor.finders.CompressorFinder',
+#)
+#
+#STATIC_ROOT = BASE_DIR / 'staticfiles'
+#COMPRESS_ROOT = STATIC_ROOT
