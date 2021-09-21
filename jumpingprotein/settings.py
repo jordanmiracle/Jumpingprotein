@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'pwa',
     'django_cleanup',
-#    'compressor',
+    #    'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -260,19 +260,20 @@ PRIVATE_FILE_STORAGE = 'jumpingprotein.storage_backends.MediaStorage'
 AWS_S3_REGION_NAME = 'eu-west-3'
 AWS_LOCATION = 'static'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATIC_URL = f'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
 PUBLIC_MEDIA_LOCATION = 'media'
-#MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME  # This was changed after we got everything up and running again
-#MEDIA_ROOT = MEDIA_URL  # As was this
+# MEDIA_URL = f'//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME  # This was changed after we got everything up and running again
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+# MEDIA_ROOT = MEDIA_URL  # As was this
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # And this
 ]
-MEDIA_URL = '/mediafiles/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+# MEDIA_URL = '/mediafiles'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 ##############################################
 
 
@@ -321,28 +322,24 @@ PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 PWA_APP_DEBUG_MODE = False
 
-
-
-
 ## Heroku
 # heroku database settings
 if not DEBUG:
     django_heroku.settings(locals(), staticfiles=False)
     DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
 
-
 ########### Memcache / Compression ##############
 
-#CACHES = {
+# CACHES = {
 #    'default': {
 #        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
 #        'LOCATION': '127.0.0.1:11211',
 #    }
-#}
+# }
 #
-#COMPRESS_ENABLED = True
-#COMPRESS_CSS_HASHING_METHOD = 'content'
-#COMPRESS_FILTERS = {
+# COMPRESS_ENABLED = True
+# COMPRESS_CSS_HASHING_METHOD = 'content'
+# COMPRESS_FILTERS = {
 #    'css':[
 #        'compressor.filters.css_default.CssAbsoluteFilter',
 #        'compressor.filters.cssmin.rCSSMinFilter',
@@ -350,18 +347,18 @@ if not DEBUG:
 #    'js':[
 #        'compressor.filters.jsmin.JSMinFilter',
 #    ]
-#}
-#KEEP_COMMENTS_ON_MINIFYING = True
+# }
+# KEEP_COMMENTS_ON_MINIFYING = True
 #
-#EXCLUDE_FROM_MINIFYING = ('^articles/', '^photos' '^admin/')
+# EXCLUDE_FROM_MINIFYING = ('^articles/', '^photos' '^admin/')
 #
 #
 #
-#STATICFILES_FINDERS = (
+# STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.FileSystemFinder',
 #    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'compressor.finders.CompressorFinder',
-#)
+# )
 #
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
-#COMPRESS_ROOT = STATIC_ROOT
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# COMPRESS_ROOT = STATIC_ROOT
