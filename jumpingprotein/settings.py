@@ -357,12 +357,11 @@ if not DEBUG:
 # EXCLUDE_FROM_MINIFYING = ('^articles/', '^photos' '^admin/')
 
 
-
- STATICFILES_FINDERS = (
+STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
- )
+)
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 COMPRESS_ROOT = STATIC_ROOT
