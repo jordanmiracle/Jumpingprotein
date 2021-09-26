@@ -2,6 +2,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 from compression_middleware.decorators import compress_page
+from django.views.decorators.gzip import gzip_page
 
 
 @compress_page

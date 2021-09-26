@@ -428,7 +428,7 @@ ul.contact li a.icon-rss:before {
     background-size: cover;
     display: block;
     height: auto;
-    width: 100%;
+    width: 100vw;
     background-position-y: center;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
