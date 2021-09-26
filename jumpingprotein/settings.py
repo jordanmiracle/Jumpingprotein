@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import json
-
+import static
 from django.core.exceptions import ImproperlyConfigured
 import django_heroku
 import dj_database_url
@@ -80,7 +80,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.gzip.GZipMiddleware',
+ #   'django.middleware.gzip.GZipMiddleware',
+    'compression_middleware.middleware.CompressionMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -88,7 +89,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'compression_middleware.middleware.CompressionMiddleware'
 ]
 
 ROOT_URLCONF = 'jumpingprotein.urls'
@@ -266,7 +266,7 @@ PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 # MEDIA_ROOT = MEDIA_URL  # As was this
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+COMPRESS_STORAGE = STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # And this
@@ -359,5 +359,5 @@ if not DEBUG:
 #    'compressor.finders.CompressorFinder',
 # )
 #
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
-# COMPRESS_ROOT = STATIC_ROOT
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+COMPRESS_ROOT = STATIC_ROOT
