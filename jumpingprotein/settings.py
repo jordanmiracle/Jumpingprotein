@@ -68,7 +68,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'pwa',
     'django_cleanup',
- #   'compressor',
+    #   'compressor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,9 +81,10 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     #   'django.middleware.gzip.GZipMiddleware',
-    'compression_middleware.middleware.CompressionMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'compression_middleware.middleware.CompressionMiddleware'
+
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -268,7 +269,7 @@ PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 # MEDIA_ROOT = MEDIA_URL  # As was this
 
-#COMPRESS_STORAGE = STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# COMPRESS_STORAGE = STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATICFILES_DIRS = [
@@ -283,12 +284,12 @@ STATICFILES_DIRS = [
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
-#STATICFILES_FINDERS = (
+# STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.FileSystemFinder',
 #    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    # other finders..
 #    'compressor.finders.CompressorFinder',
-#)
+# )
 
 # STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, 'static'),
@@ -365,5 +366,5 @@ if not DEBUG:
 #    'compressor.finders.CompressorFinder',
 # )
 #
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
-#COMPRESS_ROOT = STATIC_ROOT
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# COMPRESS_ROOT = STATIC_ROOT
