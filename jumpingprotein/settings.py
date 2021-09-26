@@ -268,7 +268,8 @@ PUBLIC_MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 # MEDIA_ROOT = MEDIA_URL  # As was this
 
-COMPRESS_STORAGE = STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#COMPRESS_STORAGE = STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # And this
