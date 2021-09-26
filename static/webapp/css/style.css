@@ -427,7 +427,7 @@ ul.contact li a.icon-rss:before {
     background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/webapp/images/crickets-in-hands-properly-blurred.webp") 50% 0 no-repeat;
     background-size: cover;
     display: block;
-    height: auto;
+    height: 30vh;
     width: 100vw;
     background-position-y: center;
     border-top-left-radius: 0px;
