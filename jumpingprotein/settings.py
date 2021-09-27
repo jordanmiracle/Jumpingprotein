@@ -112,17 +112,21 @@ WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'USER': 'jordanmiracle',
-            'NAME': 'jpblogdb',
-            'HOST': 'localhost',
-            'PASSWORD': os.getenv('DB_PASSWORD'),
-            'PORT': '5432',
-        },
-    }
+#if DEBUG:
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#            'USER': 'jordanmiracle',
+#            'NAME': 'jpblogdb',
+#            'HOST': 'localhost',
+#            'PASSWORD': os.getenv('DB_PASSWORD'),
+#            'PORT': '5432',
+#        },
+#    }
+
+
+
+
 
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, "fixtures")
