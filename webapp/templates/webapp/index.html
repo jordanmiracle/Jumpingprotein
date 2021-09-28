@@ -35,42 +35,46 @@
     <link href="default_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
 </head>
 
-
-<body class="landing is-preload">
-<div id="header-wrapper">
-    <div id="topheader" class="container">
-        <div id="logo">
-        </div>
-        <div class="navbar">
-            <div class="inner_navbar">
-                <div class="logo">
-                    <a href="{% url 'about' %}"><span>GCET</span></a>
+{% load cache %}
+{% for item in list %}
+    {% cache None 'item-fragment' item.id %}
+    <body class="landing is-preload">
+    <div id="header-wrapper">
+        <div id="topheader" class="container">
+            <div id="logo">
+            </div>
+            <div class="navbar">
+                <div class="inner_navbar">
+                    <div class="logo">
+                        <a href="{% url 'about' %}"><span>GCET</span></a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a class="current" href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'article:articles' %}">Blog</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li><a class="current" href="{% url 'index' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About Us</a></li>
-                        <li><a href="{% url 'article:articles' %}">Blog</a></li>
-                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                    </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <i class="fas fa-bars">
+
+                    </i>
                 </div>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <i class="fas fa-bars">
-
-                </i>
+        </div>
+        <div id="banner" class="container">
+            <div class="title">
+                <h2>Jumping Protein</h2>
+                <span class="byline">A division of the Glorified Community Empowerment Trust</span>
             </div>
+            <script></script>
         </div>
     </div>
-    <div id="banner" class="container">
-        <div class="title">
-            <h2>Jumping Protein</h2>
-            <span class="byline">A division of the Glorified Community Empowerment Trust</span>
-        </div>
-        <script></script>
-    </div>
-</div>
+    {% endcache%}
+{% endfor %}
 
 
 <div id="fh5co-feature-product" class="fh5co-section-gray">
