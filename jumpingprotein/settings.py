@@ -167,7 +167,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #    BASE_DIR / "static",
 #    'article/static/',
@@ -258,6 +258,28 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
+
+AWS_PRELOAD_METADATA = True
+COMPRESS_OFFLINE = True
+COMPRESS_ENABLED = True
+COMPRESS_URL = STATIC_URL
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    'compressor.filters.cssmin.CSSMinFilter'
+]
+COMPRESS_JS_FILTERS = [
+    'compressor.filters.jsmin.JSMinFilter',
+]
+COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
+AWS_IS_GZIPPED = True
+GZIP_CONTENT_TYPES = (
+    'text/css',
+    'application/javascript',
+    'application/x-javascript',
+    'text/javascript'
+)
+
+
 AWS_MEDIA_LOCATION = 'media'
 AWS_PUBLIC_LOCATION = 'public'
 PRIVATE_FILE_STORAGE = 'jumpingprotein.storage_backends.MediaStorage'

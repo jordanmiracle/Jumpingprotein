@@ -1,4 +1,5 @@
 {% load static %}
+{% load compress %}
 <!DOCTYPE HTML>
 <html lang="en">
 
@@ -15,9 +16,11 @@
     <meta name="language" content=serviceworker"English">
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="Esnath Divasoni">
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}"/>
     <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
     <link rel="stylesheet" href="{% static 'webapp/css/animate.css' %}">
+    {% endcompress %}
     <!-- Font Awesome Icon Fonts-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
