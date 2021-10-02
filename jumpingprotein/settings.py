@@ -17,6 +17,8 @@ import static
 from django.core.exceptions import ImproperlyConfigured
 import django_heroku
 import dj_database_url
+from memcacheify import memcacheify
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,7 +83,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.gzip.GZipMiddleware',
+    #   'django.middleware.gzip.GZipMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -113,7 +115,7 @@ WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-#if DEBUG:
+# if DEBUG:
 #    DATABASES = {
 #        'default': {
 #            'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -124,9 +126,6 @@ WSGI_APPLICATION = 'jumpingprotein.wsgi.application'
 #            'PORT': '5432',
 #        },
 #    }
-
-
-
 
 
 FIXTURE_DIRS = [
@@ -271,9 +270,7 @@ COMPRESS_CSS_FILTERS = [
 COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter',
 ]
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
-#COMPRESS_ROOT = STATIC_ROOT
-COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
+COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_IS_GZIPPED = True
 GZIP_CONTENT_TYPES = (
     'text/css',
@@ -281,7 +278,6 @@ GZIP_CONTENT_TYPES = (
     'application/x-javascript',
     'text/javascript'
 )
-
 
 AWS_MEDIA_LOCATION = 'media'
 AWS_PUBLIC_LOCATION = 'public'
@@ -363,15 +359,15 @@ if not DEBUG:
 
 ########### Memcache / Compression ##############
 
-#from memcacheify import memcacheify
-#
-#CACHES = memcacheify()
 
 
-#STATICFILES_FINDERS = (
-#       'django.contrib.staticfiles.finders.FileSystemFinder',
-#       'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#       'compressor.finders.CompressorFinder',
-#)
-#
-#COMPRESS_ROOT = STATIC_ROOT
+CACHES = memcacheify()
+
+# STATICFILES_FINDERS = (
+#        'django.contrib.staticfiles.finders.FileSystemFinder',
+#        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#        'compressor.finders.CompressorFinder',
+# )
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# COMPRESS_ROOT = STATIC_ROOT
