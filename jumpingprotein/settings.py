@@ -271,8 +271,8 @@ COMPRESS_CSS_FILTERS = [
 COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter',
 ]
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-COMPRESS_ROOT = STATIC_ROOT
+#STATIC_ROOT = BASE_DIR / 'staticfiles'
+#COMPRESS_ROOT = STATIC_ROOT
 COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
 AWS_IS_GZIPPED = True
 GZIP_CONTENT_TYPES = (
@@ -363,15 +363,15 @@ if not DEBUG:
 
 ########### Memcache / Compression ##############
 
-from memcacheify import memcacheify
+#from memcacheify import memcacheify
+#
+#CACHES = memcacheify()
 
-CACHES = memcacheify()
 
-
-STATICFILES_FINDERS = (
-       'django.contrib.staticfiles.finders.FileSystemFinder',
-       'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-       'compressor.finders.CompressorFinder',
-)
-
+#STATICFILES_FINDERS = (
+#       'django.contrib.staticfiles.finders.FileSystemFinder',
+#       'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#       'compressor.finders.CompressorFinder',
+#)
+#
 #COMPRESS_ROOT = STATIC_ROOT
