@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'pwa',
     'django_cleanup',
-    'compressor',
+  #  'compressor',
   #  'memcacheify',
     'django.contrib.admin',
     'django.contrib.auth',
