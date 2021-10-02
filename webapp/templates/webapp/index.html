@@ -35,9 +35,7 @@
     <link href="default_ie6.css" rel="stylesheet" type="text/css"/><![endif]-->
 </head>
 
-{% load cache %}
-{% for item in list %}
-    {% cache None 'item-fragment' item.id %}
+
     <body class="landing is-preload">
     <div id="header-wrapper">
         <div id="topheader" class="container">
@@ -73,8 +71,6 @@
             <script></script>
         </div>
     </div>
-    {% endcache%}
-{% endfor %}
 
 
 <div id="fh5co-feature-product" class="fh5co-section-gray">
