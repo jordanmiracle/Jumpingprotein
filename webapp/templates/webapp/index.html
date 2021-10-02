@@ -16,15 +16,17 @@
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="Esnath Divasoni">
     <link rel="stylesheet" href="{% static 'webapp/css/style.css' %}"/>
-    <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}">
-    <link rel="stylesheet" href="{% static 'webapp/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static "webapp/css/normalize.css" %}"/>
+    <link rel="stylesheet" href="{% static 'webapp/css/animate.css' %}"/>
     <!-- Font Awesome Icon Fonts-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="{% static 'webapp/css/fonts.css' %}"/>
 
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'webapp/css/bootstrap.css' %}"/>
     <!-- Superfish -->
-    <link rel="stylesheet" href="{% static 'webapp/css/superfish.css' %}">
+    <link rel="stylesheet" href="{% static 'webapp/css/superfish.css' %}"/>
     <link href="{% static "webapp/css/fonts.css" %}" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv=X-UA-Compatible content=" IE=edge,chrome=1">
@@ -36,41 +38,41 @@
 </head>
 
 
-    <body class="landing is-preload">
-    <div id="header-wrapper">
-        <div id="topheader" class="container">
-            <div id="logo">
-            </div>
-            <div class="navbar">
-                <div class="inner_navbar">
-                    <div class="logo">
-                        <a href="{% url 'about' %}"><span>GCET</span></a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a class="current" href="{% url 'index' %}">Home</a></li>
-                            <li><a href="{% url 'about' %}">About Us</a></li>
-                            <li><a href="{% url 'article:articles' %}">Blog</a></li>
-                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <i class="fas fa-bars">
-
-                    </i>
-                </div>
-            </div>
+<body class="landing is-preload">
+<div id="header-wrapper">
+    <div id="topheader" class="container">
+        <div id="logo">
         </div>
-        <div id="banner" class="container">
-            <div class="title">
-                <h2>Jumping Protein</h2>
-                <span class="byline">A division of the Glorified Community Empowerment Trust</span>
+        <div class="navbar">
+            <div class="inner_navbar">
+                <div class="logo">
+                    <a href="{% url 'about' %}"><span>GCET</span></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a class="current" href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'article:articles' %}">Blog</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    </ul>
+                </div>
             </div>
-            <script></script>
+            <div class="hamburger">
+                <span></span>
+                <i class="fas fa-bars">
+
+                </i>
+            </div>
         </div>
     </div>
+    <div id="banner" class="container">
+        <div class="title">
+            <h2>Jumping Protein</h2>
+            <span class="byline">A division of the Glorified Community Empowerment Trust</span>
+        </div>
+        <script></script>
+    </div>
+</div>
 
 
 <div id="fh5co-feature-product" class="fh5co-section-gray">
@@ -252,8 +254,9 @@
 
                         <p class="fh5co-social-icons">
                             <a href="#"><i class="fab fa-facebook" style="color: #32381A"></i></a>
-                            <a href="https://twitter.com/esnathmd"><i class="fab fa-twitter"  style="color: #32381A"></i></a>
-                            <a href="https://www.linkedin.com/in/esnath-divasoni-67220b8b/"><i class="fab fa-linkedin"  style="color: #32381A"></i></a>
+                            <a href="https://twitter.com/esnathmd"><i class="fab fa-twitter" style="color: #32381A"></i></a>
+                            <a href="https://www.linkedin.com/in/esnath-divasoni-67220b8b/"><i class="fab fa-linkedin"
+                                                                                               style="color: #32381A"></i></a>
                         </p>
                     </div>
                 </div>
@@ -303,18 +306,18 @@
             <div class="footer-center">
 
                 <div>
-                    <i class="fab fa-map-marker"></i>
+                    <i class="fa fa-map-marker"></i>
                     <p><span>126 Sturgess Cranborne</span>Harare, Zimbabwe</p>
                 </div>
 
                 <div>
-                    <i class="fab fa-phone"></i>
+                    <i class="fa fa-phone"></i>
                     <p>+263 772 485 521</p>
                     <p>+263 774 741 688</p>
                 </div>
 
                 <div>
-                    <i class="fab fa-envelope"></i>
+                    <i class="fa fa-envelope"></i>
                     <p><a href="mailto:gcet.victors@gmail.com">gcet.victors@gmail.com</a></p>
                 </div>
 
