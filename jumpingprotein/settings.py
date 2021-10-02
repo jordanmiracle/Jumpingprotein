@@ -17,7 +17,7 @@ import static
 from django.core.exceptions import ImproperlyConfigured
 import django_heroku
 import dj_database_url
-from memcacheify import memcacheify
+#from memcacheify import memcacheify
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -71,7 +71,7 @@ INSTALLED_APPS = [
     'pwa',
     'django_cleanup',
     'compressor',
-    'memcacheify',
+  #  'memcacheify',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -361,7 +361,7 @@ if not DEBUG:
 
 
 
-CACHES = memcacheify()
+#CACHES = memcacheify()
 
 # STATICFILES_FINDERS = (
 #        'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -369,5 +369,5 @@ CACHES = memcacheify()
 #        'compressor.finders.CompressorFinder',
 # )
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-COMPRESS_ROOT = STATIC_ROOT
+#STATIC_ROOT = BASE_DIR / 'staticfiles'
+#COMPRESS_ROOT = STATIC_ROOT
