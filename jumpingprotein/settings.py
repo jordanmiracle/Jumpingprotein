@@ -271,6 +271,7 @@ COMPRESS_CSS_FILTERS = [
 COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter',
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 COMPRESS_ROOT = STATIC_ROOT
 COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
 AWS_IS_GZIPPED = True
@@ -373,5 +374,4 @@ STATICFILES_FINDERS = (
        'compressor.finders.CompressorFinder',
 )
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 #COMPRESS_ROOT = STATIC_ROOT
