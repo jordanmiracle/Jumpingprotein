@@ -69,7 +69,7 @@ INSTALLED_APPS = [
     'pwa',
     'django_cleanup',
     'compressor',
-    'memcacheify',
+    'memcache',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
